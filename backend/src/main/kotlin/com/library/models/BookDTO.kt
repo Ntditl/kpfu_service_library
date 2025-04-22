@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 data class BookDTO(
     val bookId: Int? = null,
     val title: String,
-    val author: String?,          // ← вот здесь
+    val author: String?,        
     val isbn: String?,
     val publicationYear: Int?,
     val publisher: String?,
