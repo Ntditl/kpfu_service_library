@@ -4,7 +4,7 @@ import com.library.models.RoleDTO
 import com.library.repositories.RoleRepository
 
 class RoleService(
-    private val repository: RoleRepository = RoleRepository() // можно передавать через DI позже
+    private val repository: RoleRepository = RoleRepository()
 ) {
 
     fun getAll(): List<RoleDTO> {
