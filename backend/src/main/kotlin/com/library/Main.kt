@@ -37,7 +37,8 @@ fun Application.module() {
         allowMethod(HttpMethod.Put)
         allowMethod(HttpMethod.Delete)
         allowHeader(HttpHeaders.ContentType)
-        allowHeader("ngrok-skip-browser-warning") // 👈 ДОБАВЬ ЭТО
+        allowHeader("ngrok-skip-browser-warning") // строчка нужна, чтобы фронт
+        //лишний раз не обрабатывал переход 
     }
 
     routing {
