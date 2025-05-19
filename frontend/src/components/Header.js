@@ -1,8 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 import "./Header.css";
 
 function Header() {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
   return (
     <header className="header">
       <div className="logo">
@@ -29,11 +38,22 @@ function Header() {
         <img src="/images/icon-bell.png" alt="Уведомления" width="50" height="50"/>
         <span>Уведомления</span>
       </div>
-      <div className="login-item">
-        <img src="/images/profile_icon.png" alt="Войти" width="50" height="50"/>
-        <span>Войти</span>
-      </div>
-      
+      {user ? (
+        <div className="user-menu">
+          <div className="user-info">
+            <img src="/images/profile_icon.png" alt="Профиль" width="50" height="50"/>
+            <span>{user.first_name} {user.last_name}</span>
+          </div>
+          <button onClick={handleLogout} className="logout-button">
+            Выйти
+          </button>
+        </div>
+      ) : (
+        <Link to="/login" className="login-item">
+          <img src="/images/profile_icon.png" alt="Войти" width="50" height="50"/>
+          <span>Войти</span>
+        </Link>
+      )}
     </header>
   );
 }

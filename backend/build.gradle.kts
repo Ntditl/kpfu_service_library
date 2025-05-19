@@ -10,15 +10,35 @@ application {
 
 repositories {
     mavenCentral()
+    maven("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
+    maven("https://google.maven.org/maven2")
 }
 
 dependencies {
+    val ktorVersion = "2.3.7"
+
     // === KTOR ===
-    implementation("io.ktor:ktor-server-core:2.3.7")
-    implementation("io.ktor:ktor-server-netty:2.3.7")
-    implementation("io.ktor:ktor-server-content-negotiation:2.3.7")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.7")
-    implementation("io.ktor:ktor-server-cors:2.3.7")
+    implementation("io.ktor:ktor-server-core:$ktorVersion")
+    implementation("io.ktor:ktor-server-netty-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-server-cors-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-server-auth-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-server-auth-jwt-jvm:$ktorVersion")
+
+    // === JWT ===
+    implementation("io.jsonwebtoken:jjwt-api:0.11.5")
+    runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
+    runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
+
+    // === Firebase Admin SDK ===
+    implementation("com.google.firebase:firebase-admin:9.2.0") {
+        exclude(group = "com.google.guava", module = "guava")
+    }
+    implementation("com.google.guava:guava:32.1.3-jre")
+
+    // === Password Hashing ===
+    implementation("org.mindrot:jbcrypt:0.4")
 
     // === EXPOSED ORM ===
     implementation("org.jetbrains.exposed:exposed-core:0.45.0")
@@ -30,18 +50,18 @@ dependencies {
 
     // === Kotlinx Serialization ===
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
 
-
-
-
+    // === Config ===
     implementation("com.typesafe:config:1.4.2")
 
     // === Logging (Logback) ===
     implementation("ch.qos.logback:logback-classic:1.4.14")
+    implementation("io.ktor:ktor-server-call-logging-jvm:$ktorVersion")
 
-    // === Тесты (не обязательно сейчас, но рекомендуется) ===
+    // === Тесты ===
     testImplementation(kotlin("test"))
-    testImplementation("io.ktor:ktor-server-tests:2.3.7")
+    testImplementation("io.ktor:ktor-server-tests:$ktorVersion")
 }
 
 sourceSets {
@@ -52,11 +72,9 @@ sourceSets {
     }
 }
 
-
 tasks.processResources {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
-
 
 tasks.test {
     useJUnitPlatform()

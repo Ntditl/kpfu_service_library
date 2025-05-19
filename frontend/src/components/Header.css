@@ -134,3 +134,39 @@
   .add-book-but:hover {
     background: #3e8e41;
   }
+
+.user-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.user-info span {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #000000;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #333A8A;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #f0f0f0;
+}
