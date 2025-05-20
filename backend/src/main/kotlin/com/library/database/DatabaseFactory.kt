@@ -18,14 +18,7 @@ object DatabaseFactory {
         Database.connect(url = url, driver = driver, user = user, password = password)
 
         transaction {
-            // Drop tables in correct order (child tables first, then parent tables)
-            exec("DROP TABLE IF EXISTS book_copies CASCADE")
-            exec("DROP TABLE IF EXISTS reservations CASCADE")
-            exec("DROP TABLE IF EXISTS books CASCADE")
-            exec("DROP TABLE IF EXISTS users CASCADE")
-            exec("DROP TABLE IF EXISTS roles CASCADE")
-
-            // Create tables with correct column names
+            // Create tables if they don't exist
             SchemaUtils.create(
                 Roles, Users, Books
                 //BookCopies, Borrowings, Reservations, ReadingRoomVisits, Notifications
