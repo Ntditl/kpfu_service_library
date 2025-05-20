@@ -34,7 +34,7 @@ object Users : Table("users") {
     val phone = varchar("phone", 20)
     val roleId = integer("role_id")
     val isActive = bool("is_active")
-    val passwordHash = varchar("password_hash", 100)
+    val passwordHash = varchar("PasswordHash", 100)
 
     override val primaryKey = PrimaryKey(userId)
 }
