@@ -16,13 +16,32 @@ function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+
     try {
       const response = await api.post('/auth/login', formData);
+      const user = response.data.user;
+
+      // Сохраняем всё, что нужно
       localStorage.setItem('token', response.data.token);
-      localStorage.setItem('first_name', response.data.user.first_name);
-      
-      navigate('/');
+      localStorage.setItem('user_id', user.user_id); // проверь, как именно называется id в бэкенде
+      localStorage.setItem('first_name', user.first_name);
+      localStorage.setItem('last_name', user.last_name);
+      localStorage.setItem('phone', user.phone);
+      localStorage.setItem('role', user.role);
+
+      // Редирект в зависимости от роли
+      if (user.role === 'user') {
+        navigate('/profile/user');
+      } else if (user.role === 'librarian') {
+        navigate('/profile/librarian');
+      } else if (user.role === 'admin') {
+        navigate('/profile/admin');
+      } else {
+        navigate('/');
+      }
+
     } catch (err) {
+      console.error("Ошибка входа:", err);
       setError('Неверный email или пароль');
     }
   };
@@ -42,3 +61,4 @@ function LoginPage() {
 }
 
 export default LoginPage;
+

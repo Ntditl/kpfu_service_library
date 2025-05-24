@@ -5,11 +5,12 @@ import BookInfo from "../../components/BookInfo/BookInfo";
 import ActionButtons from "../../components/ActionButtons/ActionButtons";
 import "./BookPage.css";
 import { mockBooks } from '../../data/mockData';
-import { api } from '../../api'; 
+import { api } from '../../api';
 
 function BookPage() {
   const { bookId } = useParams();
   const [bookData, setBookData] = useState(null);
+  const [copies, setCopies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isUsingMockData, setIsUsingMockData] = useState(false);
@@ -25,6 +26,8 @@ function BookPage() {
 
         setBookData(formatBookData(selectedBook));
         setIsUsingMockData(false);
+
+        await fetchBookCopies(selectedBook.bookId);
       } catch (err) {
         console.error("Ошибка запроса, используем моковые данные:", err);
 
@@ -35,11 +38,22 @@ function BookPage() {
           setBookData(formatBookData(foundBook));
           setIsUsingMockData(true);
           setError("Сервер недоступен. Показаны демонстрационные данные.");
+          setCopies([]); // мок-копий нет
         } else {
           setError("Книга не найдена");
         }
       } finally {
         setLoading(false);
+      }
+    };
+
+    const fetchBookCopies = async (bookId) => {
+      try {
+        const res = await api.get(`/books/${bookId}/copies`);
+        setCopies(res.data);
+      } catch (err) {
+        console.error("Ошибка загрузки экземпляров книги:", err);
+        setCopies([]); // при ошибке пустой список
       }
     };
 
@@ -63,6 +77,8 @@ function BookPage() {
   if (error && !isUsingMockData) return <div className="error">{error}</div>;
   if (!bookData) return <div className="error">Данные о книге не загружены</div>;
 
+  const availableCopies = copies.filter(c => c.isInHere && !c.isInReservation).length;
+
   return (
     <div className="book-page">
       {isUsingMockData && (
@@ -73,10 +89,19 @@ function BookPage() {
       <div className="book-main">
         <div className="book-but">
           <BookCover image={bookData.coverImage} />
-          <ActionButtons bookId={bookData.id} />
+          <ActionButtons
+            bookId={bookData.id}
+            copies={copies}
+            refreshCopies={() => {
+              if (!isUsingMockData) {
+                api.get(`/books/${bookData.id}/copies`).then(res => setCopies(res.data));
+              }
+            }}
+          />
         </div>
         <div className="book-details">
           <BookInfo {...bookData} />
+          <p><strong>Доступно экземпляров: </strong>{availableCopies}</p>
         </div>
       </div>
     </div>
@@ -84,3 +109,4 @@ function BookPage() {
 }
 
 export default BookPage;
+

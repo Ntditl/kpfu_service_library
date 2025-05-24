@@ -6,7 +6,9 @@ import CatalogPage from "./pages/CatalogPage/CatalogPage";
 import AddBookPage from "./pages/AddBookPage/AddBookPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage"; 
-import UserCabinetPage from "./pages/UserCabinetPage/UserCabinetPage";
+import UserDashboard from "./pages/ProfilePage/UserDashboard";
+import LibrarianDashboard from "./pages/ProfilePage/LibrarianDashboard";
+import AdminDashboard from "./pages/ProfilePage/AdminDashboard";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
             <Route path="/add-book" element={<AddBookPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/cabinet" element={<UserCabinetPage />} />
+            <Route path="/profile/user" element={<UserDashboard />} />
+            <Route path="/profile/librarian" element={<LibrarianDashboard />} />
+            <Route path="/profile/admin" element={<AdminDashboard />} />
           </Routes>
         </main>
         <Footer />

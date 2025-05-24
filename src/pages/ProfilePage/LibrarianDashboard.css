@@ -1,0 +1,60 @@
+.librarian-dashboard .requests-section {
+  margin-top: 2rem;
+}
+
+.request-list {
+  list-style: none;
+  padding: 0;
+}
+
+.request-item {
+  background: #fff;
+  border-left: 5px solid #999;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.request-item.pending {
+  border-color: #f0ad4e;
+}
+
+.request-item.approved {
+  border-color: #5cb85c;
+}
+
+.request-item.rejected {
+  border-color: #d9534f;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+.actions button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions .approve {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.actions .reject {
+  background-color: #d9534f;
+  color: white;
+}
+
+.btn-add-book {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
