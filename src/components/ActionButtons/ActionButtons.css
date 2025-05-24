@@ -1,0 +1,19 @@
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primary {
+    width: 197px;
+    height: 62px;
+    background: #333A8A;
+    color: white;
+    border-radius: 20px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
