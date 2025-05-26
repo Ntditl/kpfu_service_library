@@ -3,6 +3,7 @@ package com.library.database
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.dao.id.IntIdTable
 import org.jetbrains.exposed.sql.Column
+import org.jetbrains.exposed.sql.javatime.datetime
 
 object Roles : Table("roles") {
     val roleId = integer("role_id").autoIncrement()
@@ -37,4 +38,26 @@ object Users : Table("users") {
     val passwordHash = varchar("PasswordHash", 100)
 
     override val primaryKey = PrimaryKey(userId)
+}
+
+object BookCopies : Table("book_copies") {
+    val copyId = integer("copy_id").autoIncrement()
+    val bookId = integer("book_id").references(Books.bookId)
+    val isInHere = bool("is_in_here")
+    val isInReservation = bool("is_in_reservation")
+
+    override val primaryKey = PrimaryKey(copyId)
+}
+
+object Borrowings : Table("borrowings") {
+    val reservationId = integer("reservation_id").autoIncrement()
+    val bookCopyId = integer("book_copy_id").references(BookCopies.copyId)
+    val userId = integer("user_id").references(Users.userId)
+    val dateRequestFromUser = datetime("date_request_from_user")
+    val dateAnswerToRequest = datetime("date_answer_to_request").nullable()
+    val resAnswerToUser = bool("res_answer_to_user").nullable()
+    val dateOfStartOfIssuance = datetime("date_of_start_of_issuance").nullable()
+    val dateToReturn = datetime("date_to_return").nullable()
+
+    override val primaryKey = PrimaryKey(reservationId)
 }

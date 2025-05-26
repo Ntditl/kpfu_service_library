@@ -20,7 +20,7 @@ object DatabaseFactory {
         transaction {
             // Create tables if they don't exist
             SchemaUtils.create(
-                Roles, Users, Books
+                Roles, Users, Books, BookCopies, Borrowings
                 //BookCopies, Borrowings, Reservations, ReadingRoomVisits, Notifications
             )
         }

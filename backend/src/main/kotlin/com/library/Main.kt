@@ -4,6 +4,8 @@ import com.library.routes.roleRoutes
 import com.library.routes.bookRoutes
 import com.library.routes.authRoutes
 import com.library.routes.userRoutes
+import com.library.routes.bookCopyRoutes
+import com.library.routes.borrowingRoutes
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
@@ -68,11 +70,24 @@ fun Application.module() {
         bookRoutes()
         authRoutes()
         userRoutes()
+        bookCopyRoutes()
+        borrowingRoutes()
     }
 
     DatabaseFactory.init(environment)
 }
 
+// Вспомогательная функция для вывода маршрутов
+fun printRoutes(route: Route, indent: String = "") {
+    route.children.forEach { child ->
+        val path = buildString {
+            append(indent)
+            append(child.toString())
+        }
+        println(path)
+        printRoutes(child, indent + "  ")
+    }
+}
 
 
 
