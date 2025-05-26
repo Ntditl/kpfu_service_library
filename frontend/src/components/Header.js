@@ -1,15 +1,16 @@
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
 import "./Header.css";
+import React from "react";
 
 function Header() {
-  const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const firstName = localStorage.getItem("first_name");
 
   const handleLogout = () => {
-    logout();
-    navigate('/login');
+    localStorage.removeItem("token");
+    localStorage.removeItem("first_name");
+    navigate("/"); // Вернём пользователя на главную
+    window.location.reload(); // Перезагружаем, чтобы обновить отображение шапки
   };
 
   return (
@@ -38,22 +39,19 @@ function Header() {
         <img src="/images/icon-bell.png" alt="Уведомления" width="50" height="50"/>
         <span>Уведомления</span>
       </div>
-      {user ? (
-        <div className="user-menu">
-          <div className="user-info">
-            <img src="/images/profile_icon.png" alt="Профиль" width="50" height="50"/>
-            <span>{user.first_name} {user.last_name}</span>
-          </div>
-          <button onClick={handleLogout} className="logout-button">
-            Выйти
-          </button>
+      {firstName ? (
+        <div className="login-item" style={{ cursor: 'pointer' }}>
+          <img src="/images/profile_icon.png" alt="Профиль" width="50" height="50" />
+          <span>{firstName}</span>
+          <button onClick={handleLogout} className="logout-button">Выйти</button>
         </div>
       ) : (
         <Link to="/login" className="login-item">
-          <img src="/images/profile_icon.png" alt="Войти" width="50" height="50"/>
+          <img src="/images/profile_icon.png" alt="Войти" width="50" height="50" />
           <span>Войти</span>
         </Link>
       )}
+      
     </header>
   );
 }

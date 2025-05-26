@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./CatalogPage.css";
-import axios from 'axios';
 import { mockBooks } from '../../data/mockData'; 
+import { api } from '../../api';
 
 function CatalogPage() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isUsingMockData, setIsUsingMockData] = useState(false);
-
-  const api = axios.create({
-    baseURL: 'https://cbbd-178-208-64-74.ngrok-free.app',
-    headers: {
-      'ngrok-skip-browser-warning': 'true'
-    },
-    timeout: 5000
-  });
 
   useEffect(() => {
     const fetchBooks = async () => {

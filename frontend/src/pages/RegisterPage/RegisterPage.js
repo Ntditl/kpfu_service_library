@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
 import './RegisterPage.css';
+import { api } from '../../api';
 
 function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -14,7 +14,6 @@ function RegisterPage() {
 
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  const { register } = useAuth();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,12 +26,13 @@ function RegisterPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    
-    const result = await register(formData);
-    if (result.success) {
-      navigate('/');
-    } else {
-      setError(result.error);
+    try {
+      const response = await api.post('/auth/register', formData);
+      if (response.status === 201) {
+        navigate('/login');
+      }
+    } catch (err) {
+      setError('Ошибка регистрации. Попробуйте другой email.');
     }
   };
 
@@ -71,20 +71,20 @@ function RegisterPage() {
         />
 
         <input
-          type="password"
-          name="password"
-          placeholder="Пароль"
-          required
-          value={formData.password}
-          onChange={handleChange}
-        />
-
-        <input
           type="tel"
           name="phone"
           placeholder="Телефон"
           required
           value={formData.phone}
+          onChange={handleChange}
+        />
+
+        <input
+          type="password"
+          name="password"
+          placeholder="Пароль"
+          required
+          value={formData.password}
           onChange={handleChange}
         />
 
