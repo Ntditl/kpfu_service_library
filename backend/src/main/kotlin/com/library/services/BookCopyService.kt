@@ -1,6 +1,8 @@
 package com.library.services
 
 import com.library.models.BookCopyDTO
+import com.library.models.UpdateBookCopyReservationDTO
+import com.library.models.UpdateBookCopyLocationDTO
 import com.library.repositories.BookCopyRepository
 
 class BookCopyService(
@@ -30,5 +32,15 @@ class BookCopyService(
     fun delete(id: Int): Boolean {
         require(id > 0) { "ID must be positive" }
         return repository.delete(id)
+    }
+
+    fun updateReservation(id: Int, dto: UpdateBookCopyReservationDTO): Boolean {
+        require(id > 0) { "ID must be positive" }
+        return repository.updateReservation(id, dto.is_in_reservation)
+    }
+
+    fun updateLocation(id: Int, dto: UpdateBookCopyLocationDTO): Boolean {
+        require(id > 0) { "ID must be positive" }
+        return repository.updateLocation(id, dto.is_in_here)
     }
 } 

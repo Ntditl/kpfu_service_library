@@ -51,4 +51,16 @@ class BookCopyRepository {
     fun delete(id: Int): Boolean = transaction {
         BookCopies.deleteWhere { BookCopies.copyId eq id } > 0
     }
+
+    fun updateReservation(id: Int, isInReservation: Boolean): Boolean = transaction {
+        BookCopies.update({ BookCopies.copyId eq id }) { stmt ->
+            stmt[BookCopies.isInReservation] = isInReservation
+        } > 0
+    }
+
+    fun updateLocation(id: Int, isInHere: Boolean): Boolean = transaction {
+        BookCopies.update({ BookCopies.copyId eq id }) { stmt ->
+            stmt[BookCopies.isInHere] = isInHere
+        } > 0
+    }
 } 

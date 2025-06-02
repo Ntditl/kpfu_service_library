@@ -8,4 +8,14 @@ data class BookCopyDTO(
     val book_id: Int,
     val is_in_here: Boolean,
     val is_in_reservation: Boolean
+)
+
+@Serializable
+data class UpdateBookCopyReservationDTO(
+    val is_in_reservation: Boolean
+)
+
+@Serializable
+data class UpdateBookCopyLocationDTO(
+    val is_in_here: Boolean
 ) 

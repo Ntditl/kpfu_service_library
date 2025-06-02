@@ -1,6 +1,7 @@
 package com.library.services
 
 import com.library.models.BorrowingDTO
+import com.library.models.UpdateBorrowingDTO
 import com.library.repositories.BorrowingRepository
 import com.library.repositories.BookCopyRepository
 import org.jetbrains.exposed.sql.transactions.transaction
@@ -54,10 +55,10 @@ class BorrowingService(
         return repository.create(dto)
     }
 
-    fun update(id: Int, dto: BorrowingDTO): Boolean {
+    fun update(id: Int, dto: UpdateBorrowingDTO): Boolean {
         require(id > 0) { "ID must be positive" }
-        require(dto.book_copy_id > 0) { "Book copy ID must be positive" }
-        require(dto.user_id > 0) { "User ID must be positive" }
+        dto.book_copy_id?.let { require(it > 0) { "Book copy ID must be positive" } }
+        dto.user_id?.let { require(it > 0) { "User ID must be positive" } }
         return repository.update(id, dto)
     }
 

@@ -25,6 +25,21 @@ data class BorrowingDTO(
 )
 
 @Serializable
+data class UpdateBorrowingDTO(
+    val book_copy_id: Int? = null,
+    val user_id: Int? = null,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_request_from_user: LocalDateTime? = null,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_answer_to_request: LocalDateTime? = null,
+    val res_answer_to_user: Boolean? = null,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_of_start_of_issuance: LocalDateTime? = null,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_to_return: LocalDateTime? = null
+)
+
+@Serializable
 data class CreateBorrowingByBookRequest(
     val book_id: Int,
     val user_id: Int,
