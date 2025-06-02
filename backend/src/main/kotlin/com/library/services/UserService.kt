@@ -20,4 +20,14 @@ class UserService(
             throw e
         }
     }
+
+    fun getAll(): List<UserDTO> {
+        logger.info("Getting all users")
+        return try {
+            repository.getAll()
+        } catch (e: Exception) {
+            logger.error("Failed to get users", e)
+            throw e
+        }
+    }
 }

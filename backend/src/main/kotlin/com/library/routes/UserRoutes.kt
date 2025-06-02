@@ -16,6 +16,18 @@ fun Route.userRoutes() {
     val logger = LoggerFactory.getLogger("UserRoutes")
 
     route("/users") {
+        get {
+            try {
+                logger.info("Received request to get all users")
+                val users = service.getAll()
+                logger.info("Successfully retrieved ${users.size} users")
+                call.respond(users)
+            } catch (e: Exception) {
+                logger.error("Error getting users", e)
+                call.respond(HttpStatusCode.InternalServerError, mapOf("error" to e.message))
+            }
+        }
+
         post {
             try {
                 logger.info("Received user creation request")

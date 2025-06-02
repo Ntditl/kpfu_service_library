@@ -100,4 +100,26 @@ class UserRepository {
             throw e
         }
     }
+
+    fun getAll(): List<UserDTO> = transaction {
+        logger.info("Getting all users from database")
+        try {
+            Users.selectAll()
+                .map { row ->
+                    UserDTO(
+                        user_id = row[Users.userId],
+                        email = row[Users.email],
+                        first_name = row[Users.firstName],
+                        last_name = row[Users.lastName],
+                        phone = row[Users.phone],
+                        role_id = row[Users.roleId],
+                        is_active = row[Users.isActive]
+                    )
+                }
+                .also { logger.info("Found ${it.size} users") }
+        } catch (e: Exception) {
+            logger.error("Database error while getting all users", e)
+            throw e
+        }
+    }
 }
