@@ -2,6 +2,9 @@ package com.library.routes
 
 import com.library.models.CreateUserRequest
 import com.library.models.UserDTO
+import com.library.models.CreateUserDTO
+import com.library.models.UpdateUserDTO
+import com.library.models.UpdateUserRoleDTO
 import com.library.services.UserService
 import io.ktor.server.application.*
 import io.ktor.server.response.*
@@ -25,6 +28,21 @@ fun Route.userRoutes() {
             } catch (e: Exception) {
                 logger.error("Error getting users", e)
                 call.respond(HttpStatusCode.InternalServerError, mapOf("error" to e.message))
+            }
+        }
+
+        get("/{id}") {
+            val id = call.parameters["id"]?.toIntOrNull()
+            if (id == null) {
+                call.respond(HttpStatusCode.BadRequest, "Invalid ID")
+                return@get
+            }
+
+            val user = service.getById(id)
+            if (user == null) {
+                call.respond(HttpStatusCode.NotFound, "User not found")
+            } else {
+                call.respond(user)
             }
         }
 
@@ -56,6 +74,54 @@ fun Route.userRoutes() {
             } catch (e: Exception) {
                 logger.error("Error creating user", e)
                 call.respond(HttpStatusCode.InternalServerError, mapOf("error" to e.message))
+            }
+        }
+
+        put("/{id}") {
+            val id = call.parameters["id"]?.toIntOrNull()
+            if (id == null) {
+                call.respond(HttpStatusCode.BadRequest, "Invalid ID")
+                return@put
+            }
+
+            val dto = call.receive<UpdateUserDTO>()
+            val updated = service.update(id, dto)
+            if (updated) {
+                call.respond(HttpStatusCode.OK)
+            } else {
+                call.respond(HttpStatusCode.NotFound, "User not found")
+            }
+        }
+
+        // Новый эндпоинт для изменения роли
+        put("/{id}/role") {
+            val id = call.parameters["id"]?.toIntOrNull()
+            if (id == null) {
+                call.respond(HttpStatusCode.BadRequest, "Invalid ID")
+                return@put
+            }
+
+            val dto = call.receive<UpdateUserRoleDTO>()
+            val updated = service.updateRole(id, dto)
+            if (updated) {
+                call.respond(HttpStatusCode.OK)
+            } else {
+                call.respond(HttpStatusCode.NotFound, "User not found")
+            }
+        }
+
+        delete("/{id}") {
+            val id = call.parameters["id"]?.toIntOrNull()
+            if (id == null) {
+                call.respond(HttpStatusCode.BadRequest, "Invalid ID")
+                return@delete
+            }
+
+            val deleted = service.delete(id)
+            if (deleted) {
+                call.respond(HttpStatusCode.OK)
+            } else {
+                call.respond(HttpStatusCode.NotFound, "User not found")
             }
         }
     }

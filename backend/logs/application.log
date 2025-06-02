@@ -17302,3 +17302,1576 @@ Caused by: kotlinx.serialization.MissingFieldException: Fields [book_copy_id, us
 22:24:36.746 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 45ms
 22:24:36.810 [eventLoopGroupProxy-4-10] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
 22:24:36.811 [eventLoopGroupProxy-4-10] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 38ms
+22:31:56.836 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+22:31:56.837 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 42ms
+22:31:57.015 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+22:31:57.016 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 44ms
+22:31:57.017 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+22:31:57.018 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 44ms
+22:31:57.072 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+22:31:57.074 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 41ms
+22:31:57.187 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+22:31:57.187 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 36ms
+22:31:57.238 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+22:31:57.238 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 38ms
+22:32:11.005 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+22:32:11.005 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 141ms
+22:32:11.282 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+22:32:11.284 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 142ms
+22:32:13.694 [eventLoopGroupProxy-4-1] INFO  AuthRoutes - Received login request
+22:32:13.695 [eventLoopGroupProxy-4-1] INFO  AuthRoutes - Parsed login request for email: libra@user.com
+22:32:13.695 [eventLoopGroupProxy-4-1] INFO  AuthService - Starting login for email: libra@user.com
+22:32:13.695 [eventLoopGroupProxy-4-1] INFO  UserRepository - Searching for user with password hash by email: libra@user.com
+22:32:13.732 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.email = 'libra@user.com'
+22:32:13.732 [eventLoopGroupProxy-4-1] INFO  UserRepository - User with password hash found
+22:32:13.732 [eventLoopGroupProxy-4-1] INFO  AuthService - User found in database
+22:32:13.793 [eventLoopGroupProxy-4-1] INFO  AuthService - Password verified successfully
+22:32:13.795 [eventLoopGroupProxy-4-1] INFO  AuthService - JWT token generated successfully
+22:32:13.795 [eventLoopGroupProxy-4-1] INFO  AuthRoutes - User logged in successfully
+22:32:13.795 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mPOST[m - /auth/login in 102ms
+22:32:13.992 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+22:32:13.995 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 55ms
+22:32:14.194 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+22:32:14.195 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 41ms
+22:32:16.082 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /auth/login in 1ms
+22:32:16.207 [eventLoopGroupProxy-4-11] INFO  AuthRoutes - Received login request
+22:32:16.207 [eventLoopGroupProxy-4-11] INFO  AuthRoutes - Parsed login request for email: user@user.com
+22:32:16.207 [eventLoopGroupProxy-4-11] INFO  AuthService - Starting login for email: user@user.com
+22:32:16.207 [eventLoopGroupProxy-4-11] INFO  UserRepository - Searching for user with password hash by email: user@user.com
+22:32:16.246 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.email = 'user@user.com'
+22:32:16.246 [eventLoopGroupProxy-4-11] INFO  UserRepository - User with password hash found
+22:32:16.247 [eventLoopGroupProxy-4-11] INFO  AuthService - User found in database
+22:32:16.310 [eventLoopGroupProxy-4-11] INFO  AuthService - Password verified successfully
+22:32:16.312 [eventLoopGroupProxy-4-11] INFO  AuthService - JWT token generated successfully
+22:32:16.312 [eventLoopGroupProxy-4-11] INFO  AuthRoutes - User logged in successfully
+22:32:16.312 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mPOST[m - /auth/login in 106ms
+22:32:16.490 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+22:32:16.491 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 38ms
+22:32:16.663 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+22:32:16.664 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 43ms
+23:06:26.503 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /books in 0ms
+23:06:26.504 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /books in 0ms
+23:06:26.705 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:06:26.706 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 48ms
+23:06:26.902 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:06:26.903 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 46ms
+23:09:52.761 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:09:52.763 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 154ms
+23:09:52.969 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:09:52.970 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 41ms
+23:09:54.509 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 0ms
+23:09:54.523 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /users in 0ms
+23:09:54.554 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:09:54.555 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 41ms
+23:09:54.580 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 1ms
+23:09:54.580 [eventLoopGroupProxy-4-10] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /users in 1ms
+23:09:54.671 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:09:54.673 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 159ms
+23:09:54.719 [eventLoopGroupProxy-4-5] INFO  UserRoutes - Received request to get all users
+23:09:54.719 [eventLoopGroupProxy-4-5] INFO  UserService - Getting all users
+23:09:54.719 [eventLoopGroupProxy-4-5] INFO  UserRepository - Getting all users from database
+23:09:54.764 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:09:54.765 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 44ms
+23:09:54.832 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:09:54.833 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 157ms
+23:09:54.883 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:09:54.883 [eventLoopGroupProxy-4-5] INFO  UserRepository - Found 5 users
+23:09:54.884 [eventLoopGroupProxy-4-5] INFO  UserRoutes - Successfully retrieved 5 users
+23:09:54.884 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 166ms
+23:09:54.887 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:09:54.888 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 52ms
+23:09:55.091 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:09:55.093 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 40ms
+23:09:55.116 [eventLoopGroupProxy-4-11] INFO  UserRoutes - Received request to get all users
+23:09:55.116 [eventLoopGroupProxy-4-11] INFO  UserService - Getting all users
+23:09:55.116 [eventLoopGroupProxy-4-11] INFO  UserRepository - Getting all users from database
+23:09:55.152 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:09:55.153 [eventLoopGroupProxy-4-11] INFO  UserRepository - Found 5 users
+23:09:55.153 [eventLoopGroupProxy-4-11] INFO  UserRoutes - Successfully retrieved 5 users
+23:09:55.153 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 38ms
+23:10:03.767 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:10:03.768 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 41ms
+23:10:04.077 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:10:04.078 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 139ms
+23:10:04.653 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:10:04.654 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 49ms
+23:10:04.655 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:10:04.656 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 49ms
+23:10:04.672 [eventLoopGroupProxy-4-1] INFO  UserRoutes - Received request to get all users
+23:10:04.672 [eventLoopGroupProxy-4-1] INFO  UserService - Getting all users
+23:10:04.672 [eventLoopGroupProxy-4-1] INFO  UserRepository - Getting all users from database
+23:10:04.715 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:10:04.716 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 44ms
+23:10:04.718 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:10:04.718 [eventLoopGroupProxy-4-1] INFO  UserRepository - Found 5 users
+23:10:04.718 [eventLoopGroupProxy-4-1] INFO  UserRoutes - Successfully retrieved 5 users
+23:10:04.719 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 47ms
+23:10:04.859 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:10:04.860 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 41ms
+23:10:04.867 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:10:04.868 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 39ms
+23:10:04.896 [eventLoopGroupProxy-4-5] INFO  UserRoutes - Received request to get all users
+23:10:04.896 [eventLoopGroupProxy-4-5] INFO  UserService - Getting all users
+23:10:04.896 [eventLoopGroupProxy-4-5] INFO  UserRepository - Getting all users from database
+23:10:04.920 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:10:04.921 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 41ms
+23:10:04.935 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:10:04.935 [eventLoopGroupProxy-4-5] INFO  UserRepository - Found 5 users
+23:10:04.935 [eventLoopGroupProxy-4-5] INFO  UserRoutes - Successfully retrieved 5 users
+23:10:04.936 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 40ms
+23:11:34.776 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:11:34.778 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 39ms
+23:11:34.973 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:11:34.974 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 39ms
+23:12:06.824 [eventLoopGroupProxy-4-8] INFO  UserRoutes - Received request to get all users
+23:12:06.824 [eventLoopGroupProxy-4-8] INFO  UserService - Getting all users
+23:12:06.824 [eventLoopGroupProxy-4-8] INFO  UserRepository - Getting all users from database
+23:12:06.865 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:12:06.865 [eventLoopGroupProxy-4-8] INFO  UserRepository - Found 5 users
+23:12:06.866 [eventLoopGroupProxy-4-8] INFO  UserRoutes - Successfully retrieved 5 users
+23:12:06.873 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 49ms
+23:12:07.140 [eventLoopGroupProxy-4-8] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /favicon.ico in 1ms
+23:15:07.772 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:07.774 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 155ms
+23:15:08.007 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:08.008 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 39ms
+23:15:12.078 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Received login request
+23:15:12.078 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Parsed login request for email: user@user.com
+23:15:12.078 [eventLoopGroupProxy-4-7] INFO  AuthService - Starting login for email: user@user.com
+23:15:12.078 [eventLoopGroupProxy-4-7] INFO  UserRepository - Searching for user with password hash by email: user@user.com
+23:15:12.228 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.email = 'user@user.com'
+23:15:12.228 [eventLoopGroupProxy-4-7] INFO  UserRepository - User with password hash found
+23:15:12.228 [eventLoopGroupProxy-4-7] INFO  AuthService - User found in database
+23:15:12.292 [eventLoopGroupProxy-4-7] INFO  AuthService - Password verified successfully
+23:15:12.295 [eventLoopGroupProxy-4-7] INFO  AuthService - JWT token generated successfully
+23:15:12.295 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - User logged in successfully
+23:15:12.295 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mPOST[m - /auth/login in 218ms
+23:15:12.739 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:12.740 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 154ms
+23:15:12.944 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:12.945 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 43ms
+23:15:26.120 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:26.121 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 42ms
+23:15:26.321 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:26.323 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 44ms
+23:15:34.051 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:34.052 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 42ms
+23:15:34.285 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:34.286 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 42ms
+23:15:40.549 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Received login request
+23:15:40.549 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Parsed login request for email: user@user.com
+23:15:40.549 [eventLoopGroupProxy-4-7] INFO  AuthService - Starting login for email: user@user.com
+23:15:40.549 [eventLoopGroupProxy-4-7] INFO  UserRepository - Searching for user with password hash by email: user@user.com
+23:15:40.591 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.email = 'user@user.com'
+23:15:40.592 [eventLoopGroupProxy-4-7] INFO  UserRepository - User with password hash found
+23:15:40.592 [eventLoopGroupProxy-4-7] INFO  AuthService - User found in database
+23:15:40.654 [eventLoopGroupProxy-4-7] INFO  AuthService - Password verified successfully
+23:15:40.655 [eventLoopGroupProxy-4-7] INFO  AuthService - JWT token generated successfully
+23:15:40.655 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - User logged in successfully
+23:15:40.655 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mPOST[m - /auth/login in 107ms
+23:15:40.988 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:40.989 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 43ms
+23:15:41.197 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:41.198 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 43ms
+23:15:44.018 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Received login request
+23:15:44.026 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Parsed login request for email: user@user.com
+23:15:44.026 [eventLoopGroupProxy-4-7] INFO  AuthService - Starting login for email: user@user.com
+23:15:44.026 [eventLoopGroupProxy-4-7] INFO  UserRepository - Searching for user with password hash by email: user@user.com
+23:15:44.178 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.email = 'user@user.com'
+23:15:44.178 [eventLoopGroupProxy-4-7] INFO  UserRepository - User with password hash found
+23:15:44.178 [eventLoopGroupProxy-4-7] INFO  AuthService - User found in database
+23:15:44.240 [eventLoopGroupProxy-4-7] INFO  AuthService - Password verified successfully
+23:15:44.241 [eventLoopGroupProxy-4-7] INFO  AuthService - JWT token generated successfully
+23:15:44.241 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - User logged in successfully
+23:15:44.241 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mPOST[m - /auth/login in 223ms
+23:15:44.569 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:44.570 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 41ms
+23:15:44.777 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:15:44.778 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 41ms
+23:15:51.180 [eventLoopGroupProxy-3-4] DEBUG io.netty.buffer.PoolThreadCache - Freed 10 thread-local buffer(s) from thread: eventLoopGroupProxy-3-4
+23:15:51.180 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.PoolThreadCache - Freed 9 thread-local buffer(s) from thread: eventLoopGroupProxy-3-2
+23:15:51.180 [eventLoopGroupProxy-3-6] DEBUG io.netty.buffer.PoolThreadCache - Freed 9 thread-local buffer(s) from thread: eventLoopGroupProxy-3-6
+23:15:51.180 [eventLoopGroupProxy-3-3] DEBUG io.netty.buffer.PoolThreadCache - Freed 9 thread-local buffer(s) from thread: eventLoopGroupProxy-3-3
+23:15:51.180 [eventLoopGroupProxy-3-5] DEBUG io.netty.buffer.PoolThreadCache - Freed 12 thread-local buffer(s) from thread: eventLoopGroupProxy-3-5
+23:15:56.068 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+23:15:56.675 [main] INFO  Application - Application started in 0.638 seconds.
+23:15:56.675 [main] DEBUG Application - Application started: io.ktor.server.application.Application@588cd519
+23:15:56.676 [main] INFO  Application - Application started: false
+23:15:56.684 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+23:15:56.707 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+23:15:56.707 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+23:15:56.708 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+23:15:56.710 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+23:15:56.710 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+23:15:56.710 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+23:15:56.711 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+23:15:56.711 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+23:15:56.712 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @4313f5bc
+23:15:56.714 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+23:15:56.714 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+23:15:56.714 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\Ntditl\AppData\Local\Temp (java.io.tmpdir)
+23:15:56.715 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+23:15:56.715 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+23:15:56.715 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+23:15:56.716 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+23:15:56.716 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+23:15:56.716 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+23:15:56.752 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+23:15:56.763 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+23:15:56.766 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+23:15:56.767 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+23:15:56.772 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+23:15:56.773 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+23:15:56.778 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+23:15:56.829 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 21076 (auto-detected)
+23:15:56.833 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+23:15:56.834 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+23:15:56.843 [main] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+23:15:56.844 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+23:15:56.866 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: d4:93:90:ff:fe:15:0a:e2 (auto-detected)
+23:15:56.876 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+23:15:56.876 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+23:15:56.893 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+23:15:56.901 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+23:15:56.901 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+23:15:56.901 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+23:15:56.903 [main] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+23:15:56.918 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://127.0.0.1:8080
+23:15:58.041 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+23:15:58.639 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+23:15:58.761 [main] INFO  Application - Application started in 0.772 seconds.
+23:15:58.762 [main] DEBUG Application - Application started: io.ktor.server.application.Application@769a58e5
+23:15:58.763 [main] INFO  Application - Application started: false
+23:15:58.769 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+23:15:58.791 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+23:15:58.792 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+23:15:58.793 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+23:15:58.793 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+23:15:58.794 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+23:15:58.794 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+23:15:58.794 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+23:15:58.795 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+23:15:58.795 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1e802ef9
+23:15:58.796 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+23:15:58.796 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+23:15:58.796 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\Ntditl\AppData\Local\Temp (java.io.tmpdir)
+23:15:58.798 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+23:15:58.798 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+23:15:58.798 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+23:15:58.798 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+23:15:58.800 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+23:15:58.800 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+23:15:58.833 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+23:15:58.842 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+23:15:58.848 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+23:15:58.848 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+23:15:58.855 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+23:15:58.856 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+23:15:58.863 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+23:15:58.910 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 10672 (auto-detected)
+23:15:58.914 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+23:15:58.914 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+23:15:58.924 [main] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+23:15:58.925 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+23:15:58.940 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: d4:93:90:ff:fe:15:0a:e2 (auto-detected)
+23:15:58.948 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+23:15:58.948 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+23:15:58.967 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+23:15:58.968 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+23:15:58.976 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+23:15:58.976 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+23:15:58.976 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+23:15:58.977 [main] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+23:15:59.362 [main] INFO  Application - Application started in 0.757 seconds.
+23:15:59.363 [main] DEBUG Application - Application started: io.ktor.server.application.Application@769d513
+23:15:59.363 [main] INFO  Application - Application started: false
+23:15:59.369 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+23:15:59.384 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+23:15:59.384 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+23:15:59.385 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+23:15:59.385 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+23:15:59.386 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+23:15:59.386 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+23:15:59.386 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+23:15:59.387 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+23:15:59.387 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1e802ef9
+23:15:59.388 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+23:15:59.388 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+23:15:59.388 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\Ntditl\AppData\Local\Temp (java.io.tmpdir)
+23:15:59.388 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+23:15:59.388 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+23:15:59.389 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+23:15:59.389 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+23:15:59.390 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+23:15:59.390 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+23:15:59.414 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+23:15:59.420 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+23:15:59.424 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+23:15:59.425 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+23:15:59.428 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+23:15:59.428 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+23:15:59.434 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+23:15:59.466 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 17816 (auto-detected)
+23:15:59.469 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+23:15:59.469 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+23:15:59.477 [main] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+23:15:59.478 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+23:15:59.492 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: d4:93:90:ff:fe:15:0a:e2 (auto-detected)
+23:15:59.499 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+23:15:59.499 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+23:15:59.514 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+23:15:59.523 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+23:15:59.523 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+23:15:59.523 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+23:15:59.524 [main] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+23:16:04.184 [KtorShutdownHook] DEBUG Application - Application stopping: io.ktor.server.application.Application@769a58e5
+23:16:04.187 [KtorShutdownHook] DEBUG Application - Application stopped: io.ktor.server.application.Application@769a58e5
+23:16:04.188 [KtorShutdownHook] INFO  Application - Application stopped
+23:16:04.741 [KtorShutdownHook] DEBUG Application - Application stopping: io.ktor.server.application.Application@769d513
+23:16:04.745 [KtorShutdownHook] DEBUG Application - Application stopped: io.ktor.server.application.Application@769d513
+23:16:04.745 [KtorShutdownHook] INFO  Application - Application stopped
+23:16:14.287 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+23:16:14.287 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+23:16:14.287 [eventLoopGroupProxy-3-2] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3383532b
+23:16:14.316 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+23:16:14.316 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+23:16:14.316 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+23:16:14.316 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+23:16:14.316 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+23:16:14.434 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 77ms
+23:16:14.434 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 77ms
+23:16:14.605 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:16:14.663 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 112ms
+23:16:14.863 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:16:14.865 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 41ms
+23:16:14.960 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:16:14.965 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 45ms
+23:16:15.067 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:16:15.072 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 148ms
+23:16:15.425 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:16:15.426 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 38ms
+23:16:15.487 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:16:15.489 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 39ms
+23:18:48.590 [eventLoopGroupProxy-3-1] DEBUG io.netty.buffer.PoolThreadCache - Freed 6 thread-local buffer(s) from thread: eventLoopGroupProxy-3-1
+23:18:48.590 [eventLoopGroupProxy-3-3] DEBUG io.netty.buffer.PoolThreadCache - Freed 3 thread-local buffer(s) from thread: eventLoopGroupProxy-3-3
+23:18:48.590 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.PoolThreadCache - Freed 7 thread-local buffer(s) from thread: eventLoopGroupProxy-3-2
+23:18:55.916 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+23:18:56.510 [main] INFO  Application - Application started in 0.633 seconds.
+23:18:56.510 [main] DEBUG Application - Application started: io.ktor.server.application.Application@4ba89729
+23:18:56.512 [main] INFO  Application - Application started: false
+23:18:56.517 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+23:18:56.535 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+23:18:56.536 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+23:18:56.539 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+23:18:56.540 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+23:18:56.540 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+23:18:56.541 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+23:18:56.541 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+23:18:56.542 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+23:18:56.543 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1e802ef9
+23:18:56.543 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+23:18:56.543 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+23:18:56.543 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\Ntditl\AppData\Local\Temp (java.io.tmpdir)
+23:18:56.544 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+23:18:56.544 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+23:18:56.546 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+23:18:56.546 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+23:18:56.547 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+23:18:56.547 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+23:18:56.574 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+23:18:56.580 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+23:18:56.585 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+23:18:56.586 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+23:18:56.591 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+23:18:56.592 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+23:18:56.597 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+23:18:56.637 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 17660 (auto-detected)
+23:18:56.640 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+23:18:56.640 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+23:18:56.648 [main] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+23:18:56.649 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+23:18:56.665 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: d4:93:90:ff:fe:15:0a:e2 (auto-detected)
+23:18:56.673 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+23:18:56.674 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+23:18:56.692 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+23:18:56.692 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+23:18:56.692 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+23:18:56.692 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+23:18:56.692 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+23:18:56.692 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+23:18:56.692 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+23:18:56.692 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+23:18:56.692 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+23:18:56.693 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+23:18:56.693 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+23:18:56.693 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+23:18:56.702 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+23:18:56.702 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+23:18:56.702 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+23:18:56.705 [main] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+23:18:56.722 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://127.0.0.1:8080
+23:19:32.467 [main] DEBUG Application - Application stopping: io.ktor.server.application.Application@4ba89729
+23:19:32.469 [main] DEBUG Application - Application stopped: io.ktor.server.application.Application@4ba89729
+23:19:32.469 [main] INFO  Application - Application stopped
+23:20:12.045 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+23:20:12.610 [main] INFO  Application - Application started in 0.601 seconds.
+23:20:12.611 [main] DEBUG Application - Application started: io.ktor.server.application.Application@769a58e5
+23:20:12.611 [main] INFO  Application - Application started: false
+23:20:12.617 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+23:20:12.632 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+23:20:12.632 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+23:20:12.633 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+23:20:12.635 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+23:20:12.635 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+23:20:12.636 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+23:20:12.636 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+23:20:12.636 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+23:20:12.637 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1e802ef9
+23:20:12.638 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+23:20:12.638 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+23:20:12.638 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\Ntditl\AppData\Local\Temp (java.io.tmpdir)
+23:20:12.638 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+23:20:12.638 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+23:20:12.638 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+23:20:12.638 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+23:20:12.639 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+23:20:12.639 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+23:20:12.664 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+23:20:12.671 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+23:20:12.674 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+23:20:12.674 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+23:20:12.678 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+23:20:12.678 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+23:20:12.683 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+23:20:12.718 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 5344 (auto-detected)
+23:20:12.720 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+23:20:12.721 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+23:20:12.729 [main] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+23:20:12.730 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+23:20:12.745 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: d4:93:90:ff:fe:15:0a:e2 (auto-detected)
+23:20:12.752 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+23:20:12.752 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+23:20:12.766 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+23:20:12.767 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+23:20:12.776 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+23:20:12.776 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+23:20:12.776 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+23:20:12.777 [main] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+23:20:12.788 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://127.0.0.1:8080
+23:20:52.293 [eventLoopGroupProxy-3-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+23:20:52.293 [eventLoopGroupProxy-3-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+23:20:52.294 [eventLoopGroupProxy-3-1] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@177b9bee
+23:20:52.325 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+23:20:52.325 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+23:20:52.325 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+23:20:52.325 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+23:20:52.325 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+23:20:52.431 [eventLoopGroupProxy-4-1] DEBUG Application - [31m404 Not Found[m: [36mGET[m - / in 68ms
+23:41:01.054 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 3ms
+23:41:01.054 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role in 3ms
+23:41:01.054 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role in 3ms
+23:41:01.054 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 3ms
+23:41:01.314 [eventLoopGroupProxy-4-4] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 1ms
+23:41:01.375 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:01.448 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 135ms
+23:41:01.469 [eventLoopGroupProxy-4-4] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:41:01.643 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:01.645 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 40ms
+23:41:04.892 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /books in 1ms
+23:41:04.906 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /books in 0ms
+23:41:05.084 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:41:05.091 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 47ms
+23:41:05.283 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:41:05.285 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 41ms
+23:41:07.066 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:41:07.068 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 39ms
+23:41:07.264 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:41:07.266 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 38ms
+23:41:16.605 [eventLoopGroupProxy-4-4] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:41:16.638 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:16.640 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 40ms
+23:41:16.760 [eventLoopGroupProxy-4-5] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:41:16.876 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:16.878 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 39ms
+23:41:36.321 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 0ms
+23:41:36.381 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /books in 1ms
+23:41:36.382 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /book-copies in 1ms
+23:41:36.382 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /books in 1ms
+23:41:36.382 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /users in 1ms
+23:41:36.382 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 1ms
+23:41:36.382 [eventLoopGroupProxy-4-10] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /book-copies in 1ms
+23:41:36.382 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /users in 0ms
+23:41:36.575 [eventLoopGroupProxy-4-7] INFO  UserRoutes - Received request to get all users
+23:41:36.575 [eventLoopGroupProxy-4-7] INFO  UserService - Getting all users
+23:41:36.576 [eventLoopGroupProxy-4-7] INFO  UserRepository - Getting all users from database
+23:41:36.631 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:41:36.633 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 59ms
+23:41:36.635 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:36.637 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 58ms
+23:41:36.742 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:41:36.742 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:41:36.744 [eventLoopGroupProxy-4-7] INFO  UserRepository - Found 5 users
+23:41:36.745 [eventLoopGroupProxy-4-7] INFO  UserRoutes - Successfully retrieved 5 users
+23:41:36.748 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 174ms
+23:41:36.748 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 169ms
+23:41:36.904 [eventLoopGroupProxy-4-7] INFO  UserRoutes - Received request to get all users
+23:41:36.904 [eventLoopGroupProxy-4-7] INFO  UserService - Getting all users
+23:41:36.904 [eventLoopGroupProxy-4-7] INFO  UserRepository - Getting all users from database
+23:41:36.949 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:41:36.950 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:36.951 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 168ms
+23:41:36.952 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 160ms
+23:41:36.959 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:41:36.959 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:41:36.959 [eventLoopGroupProxy-4-7] INFO  UserRepository - Found 5 users
+23:41:36.960 [eventLoopGroupProxy-4-7] INFO  UserRoutes - Successfully retrieved 5 users
+23:41:36.960 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 56ms
+23:41:36.960 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 56ms
+23:41:49.056 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 1ms
+23:41:49.056 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 1ms
+23:41:49.061 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role in 0ms
+23:41:49.061 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role in 0ms
+23:41:49.292 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:49.293 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 40ms
+23:41:49.311 [eventLoopGroupProxy-4-6] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:41:49.481 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:49.483 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 39ms
+23:41:49.526 [eventLoopGroupProxy-4-3] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 1ms
+23:41:56.366 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:56.368 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 42ms
+23:41:56.432 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:41:56.433 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 42ms
+23:41:56.435 [eventLoopGroupProxy-4-6] INFO  UserRoutes - Received request to get all users
+23:41:56.435 [eventLoopGroupProxy-4-6] INFO  UserService - Getting all users
+23:41:56.435 [eventLoopGroupProxy-4-6] INFO  UserRepository - Getting all users from database
+23:41:56.441 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:41:56.443 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 42ms
+23:41:56.473 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:41:56.473 [eventLoopGroupProxy-4-6] INFO  UserRepository - Found 5 users
+23:41:56.475 [eventLoopGroupProxy-4-6] INFO  UserRoutes - Successfully retrieved 5 users
+23:41:56.475 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 40ms
+23:41:56.556 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:41:56.557 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 39ms
+23:41:56.640 [eventLoopGroupProxy-4-11] INFO  UserRoutes - Received request to get all users
+23:41:56.640 [eventLoopGroupProxy-4-11] INFO  UserService - Getting all users
+23:41:56.640 [eventLoopGroupProxy-4-11] INFO  UserRepository - Getting all users from database
+23:41:56.679 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:41:56.681 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 46ms
+23:41:56.684 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:41:56.685 [eventLoopGroupProxy-4-11] INFO  UserRepository - Found 5 users
+23:41:56.685 [eventLoopGroupProxy-4-11] INFO  UserRoutes - Successfully retrieved 5 users
+23:41:56.686 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 46ms
+23:41:56.786 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:41:56.787 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 152ms
+23:50:00.909 [eventLoopGroupProxy-4-8] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:50:00.947 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:50:00.949 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 40ms
+23:50:01.149 [eventLoopGroupProxy-4-12] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:50:01.188 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:50:01.188 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 39ms
+23:50:54.482 [eventLoopGroupProxy-4-12] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 1ms
+23:50:54.615 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:50:54.617 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 143ms
+23:50:54.716 [eventLoopGroupProxy-4-12] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:50:54.840 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:50:54.841 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 38ms
+23:50:54.886 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /book-copies in 0ms
+23:50:54.936 [eventLoopGroupProxy-4-10] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:50:54.938 [eventLoopGroupProxy-4-10] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 43ms
+23:50:55.102 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:50:55.104 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 43ms
+23:50:55.246 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:50:55.248 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 139ms
+23:50:55.307 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:50:55.309 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 40ms
+23:51:13.109 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role in 1ms
+23:51:13.322 [eventLoopGroupProxy-4-8] DEBUG Application - [31m404 Not Found[m: [36mPOST[m - /borrowings-to-role in 0ms
+23:52:10.686 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:52:10.688 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 39ms
+23:52:10.877 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:52:10.879 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 39ms
+23:53:46.451 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:53:46.453 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 39ms
+23:53:46.747 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:53:46.749 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 38ms
+23:54:13.235 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /auth/register in 0ms
+23:54:13.432 [eventLoopGroupProxy-4-1] INFO  AuthRoutes - Received registration request
+23:54:13.502 [eventLoopGroupProxy-4-1] INFO  AuthRoutes - Parsed registration request for email: admin@user.com
+23:54:13.503 [eventLoopGroupProxy-4-1] INFO  AuthService - Starting registration for email: admin@user.com
+23:54:13.504 [eventLoopGroupProxy-4-1] INFO  UserRepository - Searching for user by email: admin@user.com
+23:54:13.550 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.email = 'admin@user.com'
+23:54:13.551 [eventLoopGroupProxy-4-1] INFO  UserRepository - User not found
+23:54:13.624 [eventLoopGroupProxy-4-1] INFO  AuthService - Password hashed successfully
+23:54:13.624 [eventLoopGroupProxy-4-1] INFO  AuthService - Created UserDTO object
+23:54:13.625 [eventLoopGroupProxy-4-1] INFO  UserRepository - Starting database transaction to create user: admin@user.com
+23:54:13.675 [eventLoopGroupProxy-4-1] DEBUG Exposed - INSERT INTO users ("PasswordHash", email, first_name, is_active, last_name, phone, role_id) VALUES ('$2a$10$i6v3aDDiXlaIbLI7bWLaEO5dDabGE497Ik3N8zhsQxWwCOVqd68JG', 'admin@user.com', 'админ', TRUE, 'главный', '12345', 1)
+23:54:13.675 [eventLoopGroupProxy-4-1] INFO  UserRepository - User created in database with ID: 6
+23:54:13.676 [eventLoopGroupProxy-4-1] INFO  AuthService - User created in database with ID: 6
+23:54:13.677 [eventLoopGroupProxy-4-1] INFO  UserRepository - Searching for user by ID: 6
+23:54:13.716 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.user_id = 6
+23:54:13.716 [eventLoopGroupProxy-4-1] INFO  UserRepository - User found
+23:54:13.716 [eventLoopGroupProxy-4-1] INFO  AuthService - Retrieved created user from database
+23:54:13.912 [eventLoopGroupProxy-4-1] INFO  AuthService - JWT token generated successfully
+23:54:13.913 [eventLoopGroupProxy-4-1] INFO  AuthRoutes - User registered successfully
+23:54:13.916 [eventLoopGroupProxy-4-1] DEBUG Application - [32m201 Created[m: [36mPOST[m - /auth/register in 484ms
+23:54:18.230 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /auth/login in 0ms
+23:54:18.737 [eventLoopGroupProxy-4-1] INFO  AuthRoutes - Received login request
+23:54:18.747 [eventLoopGroupProxy-4-1] INFO  AuthRoutes - Parsed login request for email: admin@user.com
+23:54:18.747 [eventLoopGroupProxy-4-1] INFO  AuthService - Starting login for email: admin@user.com
+23:54:18.748 [eventLoopGroupProxy-4-1] INFO  UserRepository - Searching for user with password hash by email: admin@user.com
+23:54:18.897 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.email = 'admin@user.com'
+23:54:18.898 [eventLoopGroupProxy-4-1] INFO  UserRepository - User with password hash found
+23:54:18.899 [eventLoopGroupProxy-4-1] INFO  AuthService - User found in database
+23:54:18.961 [eventLoopGroupProxy-4-1] INFO  AuthService - Password verified successfully
+23:54:18.963 [eventLoopGroupProxy-4-1] INFO  AuthService - JWT token generated successfully
+23:54:18.963 [eventLoopGroupProxy-4-1] INFO  AuthRoutes - User logged in successfully
+23:54:18.964 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mPOST[m - /auth/login in 227ms
+23:54:19.381 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:54:19.383 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 147ms
+23:54:19.576 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:54:19.578 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 46ms
+23:55:24.341 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:55:24.342 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 47ms
+23:55:24.641 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:55:24.642 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 148ms
+23:55:35.813 [eventLoopGroupProxy-4-1] INFO  UserRoutes - Received request to get all users
+23:55:35.813 [eventLoopGroupProxy-4-1] INFO  UserService - Getting all users
+23:55:35.813 [eventLoopGroupProxy-4-1] INFO  UserRepository - Getting all users from database
+23:55:35.855 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:55:35.855 [eventLoopGroupProxy-4-1] INFO  UserRepository - Found 6 users
+23:55:35.856 [eventLoopGroupProxy-4-1] INFO  UserRoutes - Successfully retrieved 6 users
+23:55:35.857 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 44ms
+23:55:35.883 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role in 0ms
+23:55:35.885 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role in 1ms
+23:55:36.029 [eventLoopGroupProxy-4-2] INFO  UserRoutes - Received request to get all users
+23:55:36.029 [eventLoopGroupProxy-4-2] INFO  UserService - Getting all users
+23:55:36.029 [eventLoopGroupProxy-4-2] INFO  UserRepository - Getting all users from database
+23:55:36.092 [eventLoopGroupProxy-4-1] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:55:36.174 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+23:55:36.174 [eventLoopGroupProxy-4-2] INFO  UserRepository - Found 6 users
+23:55:36.175 [eventLoopGroupProxy-4-2] INFO  UserRoutes - Successfully retrieved 6 users
+23:55:36.175 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 146ms
+23:55:36.251 [eventLoopGroupProxy-4-2] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:56:43.041 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:56:43.042 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 43ms
+23:56:43.059 [eventLoopGroupProxy-4-4] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:56:43.271 [eventLoopGroupProxy-4-5] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+23:56:43.314 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+23:56:43.315 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 44ms
+23:56:43.365 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:56:43.366 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 46ms
+23:56:43.473 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:56:43.474 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 154ms
+23:56:43.564 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+23:56:43.565 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 42ms
+23:56:43.671 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+23:56:43.673 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 44ms
+23:56:45.754 [eventLoopGroupProxy-4-4] DEBUG Application - [31m404 Not Found[m: [36mPOST[m - /borrowings-to-role in 1ms
+00:00:51.036 [eventLoopGroupProxy-3-1] DEBUG io.netty.buffer.PoolThreadCache - Freed 8 thread-local buffer(s) from thread: eventLoopGroupProxy-3-1
+00:00:51.036 [eventLoopGroupProxy-3-6] DEBUG io.netty.buffer.PoolThreadCache - Freed 7 thread-local buffer(s) from thread: eventLoopGroupProxy-3-6
+00:00:51.036 [eventLoopGroupProxy-3-7] DEBUG io.netty.buffer.PoolThreadCache - Freed 7 thread-local buffer(s) from thread: eventLoopGroupProxy-3-7
+00:00:51.036 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.PoolThreadCache - Freed 6 thread-local buffer(s) from thread: eventLoopGroupProxy-3-2
+00:00:51.036 [eventLoopGroupProxy-3-3] DEBUG io.netty.buffer.PoolThreadCache - Freed 7 thread-local buffer(s) from thread: eventLoopGroupProxy-3-3
+00:00:51.036 [eventLoopGroupProxy-3-4] DEBUG io.netty.buffer.PoolThreadCache - Freed 9 thread-local buffer(s) from thread: eventLoopGroupProxy-3-4
+00:00:51.036 [eventLoopGroupProxy-3-5] DEBUG io.netty.buffer.PoolThreadCache - Freed 8 thread-local buffer(s) from thread: eventLoopGroupProxy-3-5
+00:00:51.037 [main] DEBUG Application - Application stopping: io.ktor.server.application.Application@769a58e5
+00:00:51.038 [main] DEBUG Application - Application stopped: io.ktor.server.application.Application@769a58e5
+00:00:51.038 [main] INFO  Application - Application stopped
+00:00:55.434 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+00:00:56.081 [main] INFO  Application - Application started in 0.682 seconds.
+00:00:56.081 [main] DEBUG Application - Application started: io.ktor.server.application.Application@141e879d
+00:00:56.082 [main] INFO  Application - Application started: false
+00:00:56.089 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+00:00:56.107 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+00:00:56.107 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+00:00:56.108 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+00:00:56.109 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+00:00:56.109 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+00:00:56.109 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+00:00:56.109 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+00:00:56.110 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+00:00:56.111 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1e802ef9
+00:00:56.112 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+00:00:56.112 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+00:00:56.112 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\Ntditl\AppData\Local\Temp (java.io.tmpdir)
+00:00:56.113 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+00:00:56.113 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+00:00:56.114 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+00:00:56.114 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+00:00:56.115 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+00:00:56.115 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+00:00:56.138 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+00:00:56.146 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+00:00:56.151 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+00:00:56.151 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+00:00:56.155 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+00:00:56.156 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+00:00:56.162 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+00:00:56.206 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 23420 (auto-detected)
+00:00:56.210 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+00:00:56.211 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+00:00:56.219 [main] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+00:00:56.219 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+00:00:56.234 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: d4:93:90:ff:fe:15:0a:e2 (auto-detected)
+00:00:56.240 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+00:00:56.240 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+00:00:56.260 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+00:00:56.270 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+00:00:56.270 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+00:00:56.270 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+00:00:56.271 [main] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+00:00:56.283 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://127.0.0.1:8080
+00:01:02.996 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+00:01:02.997 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+00:01:02.998 [eventLoopGroupProxy-3-2] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@206c8e67
+00:01:03.035 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+00:01:03.035 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+00:01:03.035 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+00:01:03.035 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+00:01:03.035 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+00:01:03.180 [eventLoopGroupProxy-4-1] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 98ms
+00:01:03.264 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:01:03.277 [eventLoopGroupProxy-4-1] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+00:01:03.353 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 271ms
+00:01:03.614 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:01:03.620 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 67ms
+00:01:03.621 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:01:03.629 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 62ms
+00:01:03.709 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:01:03.711 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 158ms
+00:01:04.019 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:01:04.019 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:01:04.021 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 49ms
+00:01:04.021 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 49ms
+00:01:05.313 [eventLoopGroupProxy-4-3] DEBUG Application - [31m404 Not Found[m: [36mPOST[m - /borrowings-to-role in 0ms
+00:01:15.379 [eventLoopGroupProxy-4-4] INFO  UserRoutes - Received request to get all users
+00:01:15.380 [eventLoopGroupProxy-4-5] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 1ms
+00:01:15.380 [eventLoopGroupProxy-4-4] INFO  UserService - Getting all users
+00:01:15.382 [eventLoopGroupProxy-4-4] INFO  UserRepository - Getting all users from database
+00:01:15.426 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:01:15.428 [eventLoopGroupProxy-4-4] INFO  UserRepository - Found 6 users
+00:01:15.429 [eventLoopGroupProxy-4-4] INFO  UserRoutes - Successfully retrieved 6 users
+00:01:15.434 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 55ms
+00:01:15.551 [eventLoopGroupProxy-4-4] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+00:01:15.636 [eventLoopGroupProxy-4-4] INFO  UserRoutes - Received request to get all users
+00:01:15.636 [eventLoopGroupProxy-4-4] INFO  UserService - Getting all users
+00:01:15.636 [eventLoopGroupProxy-4-4] INFO  UserRepository - Getting all users from database
+00:01:15.687 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:01:15.687 [eventLoopGroupProxy-4-4] INFO  UserRepository - Found 6 users
+00:01:15.688 [eventLoopGroupProxy-4-4] INFO  UserRoutes - Successfully retrieved 6 users
+00:01:15.689 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 53ms
+00:01:20.281 [eventLoopGroupProxy-4-2] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 0ms
+00:01:20.307 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:01:20.310 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 39ms
+00:01:20.534 [eventLoopGroupProxy-4-3] DEBUG Application - [31m404 Not Found[m: [36mGET[m - /borrowings-to-role in 1ms
+00:01:20.582 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:01:20.584 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 51ms
+00:01:20.586 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:01:20.588 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 49ms
+00:01:20.652 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:01:20.655 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 46ms
+00:01:20.901 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:01:20.902 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 154ms
+00:01:20.977 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:01:20.979 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 142ms
+00:01:22.442 [eventLoopGroupProxy-4-3] DEBUG Application - [31m404 Not Found[m: [36mPOST[m - /borrowings-to-role in 1ms
+00:01:41.899 [eventLoopGroupProxy-3-7] DEBUG io.netty.buffer.PoolThreadCache - Freed 3 thread-local buffer(s) from thread: eventLoopGroupProxy-3-7
+00:01:41.899 [eventLoopGroupProxy-3-6] DEBUG io.netty.buffer.PoolThreadCache - Freed 3 thread-local buffer(s) from thread: eventLoopGroupProxy-3-6
+00:01:41.899 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.PoolThreadCache - Freed 4 thread-local buffer(s) from thread: eventLoopGroupProxy-3-2
+00:01:42.984 [eventLoopGroupProxy-3-4] DEBUG io.netty.buffer.PoolThreadCache - Freed 2 thread-local buffer(s) from thread: eventLoopGroupProxy-3-4
+00:01:42.984 [eventLoopGroupProxy-3-1] DEBUG io.netty.buffer.PoolThreadCache - Freed 5 thread-local buffer(s) from thread: eventLoopGroupProxy-3-1
+00:01:42.984 [eventLoopGroupProxy-3-5] DEBUG io.netty.buffer.PoolThreadCache - Freed 4 thread-local buffer(s) from thread: eventLoopGroupProxy-3-5
+00:01:43.092 [eventLoopGroupProxy-3-3] DEBUG io.netty.buffer.PoolThreadCache - Freed 5 thread-local buffer(s) from thread: eventLoopGroupProxy-3-3
+00:01:43.092 [main] DEBUG Application - Application stopping: io.ktor.server.application.Application@141e879d
+00:01:43.092 [main] DEBUG Application - Application stopped: io.ktor.server.application.Application@141e879d
+00:01:43.093 [main] INFO  Application - Application stopped
+00:01:45.848 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+00:01:46.442 [main] INFO  Application - Application started in 0.633 seconds.
+00:01:46.442 [main] DEBUG Application - Application started: io.ktor.server.application.Application@15fdd1f2
+00:01:46.442 [main] INFO  Application - Application started: false
+00:01:46.447 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+00:01:46.465 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+00:01:46.465 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+00:01:46.466 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+00:01:46.467 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+00:01:46.467 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+00:01:46.467 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+00:01:46.467 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+00:01:46.468 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+00:01:46.468 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1e802ef9
+00:01:46.469 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+00:01:46.469 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+00:01:46.469 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\Ntditl\AppData\Local\Temp (java.io.tmpdir)
+00:01:46.469 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+00:01:46.469 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+00:01:46.469 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+00:01:46.471 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+00:01:46.471 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+00:01:46.471 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+00:01:46.496 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+00:01:46.502 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+00:01:46.505 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+00:01:46.505 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+00:01:46.509 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+00:01:46.510 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+00:01:46.516 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+00:01:46.548 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 8452 (auto-detected)
+00:01:46.552 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+00:01:46.552 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+00:01:46.559 [main] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+00:01:46.560 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+00:01:46.573 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: d4:93:90:ff:fe:15:0a:e2 (auto-detected)
+00:01:46.580 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+00:01:46.580 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+00:01:46.593 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+00:01:46.593 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+00:01:46.593 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+00:01:46.593 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+00:01:46.593 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+00:01:46.593 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+00:01:46.593 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+00:01:46.593 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+00:01:46.593 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+00:01:46.594 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+00:01:46.594 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+00:01:46.594 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+00:01:46.603 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+00:01:46.604 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+00:01:46.604 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+00:01:46.605 [main] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+00:01:46.615 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://127.0.0.1:8080
+00:02:18.084 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+00:02:18.084 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+00:02:18.085 [eventLoopGroupProxy-3-2] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6c4f9d58
+00:02:18.128 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+00:02:18.128 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+00:02:18.128 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+00:02:18.129 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+00:02:18.129 [eventLoopGroupProxy-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+00:02:18.273 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:02:18.273 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:02:18.416 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 228ms
+00:02:18.416 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 228ms
+00:02:18.560 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:02:18.563 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 45ms
+00:02:18.661 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:02:18.663 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:02:18.666 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 69ms
+00:02:18.666 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:02:18.676 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 84ms
+00:02:18.683 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 86ms
+00:02:18.918 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:02:18.921 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 54ms
+00:02:19.017 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:02:19.021 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 154ms
+00:02:20.152 [eventLoopGroupProxy-4-4] DEBUG Application - Unhandled: POST - /borrowings-to-role. Exception class io.ktor.server.plugins.BadRequestException: Failed to convert request body to class com.library.models.CreateBorrowingsToRoleDTO
+io.ktor.server.plugins.BadRequestException: Failed to convert request body to class com.library.models.CreateBorrowingsToRoleDTO
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:69)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.access$convertBody(RequestConverter.kt:1)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invokeSuspend(RequestConverter.kt:40)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.OnCallReceiveContext.transformBody(KtorCallContexts.kt:65)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invokeSuspend(RequestConverter.kt:28)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invokeSuspend(PluginBuilder.kt:163)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invokeSuspend(PluginBuilder.kt:107)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invokeSuspend(PluginBuilder.kt:215)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invokeSuspend(PluginBuilder.kt:198)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.debug.ContextUtilsKt.addToContextInDebugMode(ContextUtils.kt:30)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invokeSuspend(PluginBuilder.kt:194)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveNullable(ApplicationReceiveFunctions.kt:103)
+	at com.library.routes.BorrowingsToRoleRoutesKt$borrowingsToRoleRoutes$1$3.invokeSuspend(BorrowingsToRoleRoutes.kt:76)
+	at com.library.routes.BorrowingsToRoleRoutesKt$borrowingsToRoleRoutes$1$3.invoke(BorrowingsToRoleRoutes.kt)
+	at com.library.routes.BorrowingsToRoleRoutesKt$borrowingsToRoleRoutes$1$3.invoke(BorrowingsToRoleRoutes.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invokeSuspend(Route.kt:116)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.routing.Routing.executeResult(Routing.kt:190)
+	at io.ktor.server.routing.Routing.interceptor(Routing.kt:64)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invokeSuspend(Routing.kt:140)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:124)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invokeSuspend(DefaultEnginePipeline.kt:123)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invokeSuspend(NettyApplicationCallHandler.kt:119)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at io.ktor.server.netty.NettyApplicationCallHandler.handleRequest(NettyApplicationCallHandler.kt:37)
+	at io.ktor.server.netty.NettyApplicationCallHandler.channelRead(NettyApplicationCallHandler.kt:29)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.access$600(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$7.run(AbstractChannelHandlerContext.java:425)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: io.ktor.serialization.JsonConvertException: Illegal input: Text '2025-06-02T21:02:15.843Z' could not be parsed, unparsed text found at index 23
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:90)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:67)
+	... 94 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '2025-06-02T21:02:15.843Z' could not be parsed, unparsed text found at index 23
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2055)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:479)
+	at com.library.models.LocalDateTimeSerializer.deserialize(BorrowingDTO.kt:88)
+	at com.library.models.LocalDateTimeSerializer.deserialize(BorrowingDTO.kt:80)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at com.library.models.CreateBorrowingsToRoleDTO$$serializer.deserialize(BorrowingDTO.kt:61)
+	at com.library.models.CreateBorrowingsToRoleDTO$$serializer.deserialize(BorrowingDTO.kt:61)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:107)
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:82)
+	... 95 common frames omitted
+00:02:20.158 [eventLoopGroupProxy-4-4] DEBUG Application - [31m400 Bad Request[m: [36mPOST[m - /borrowings-to-role in 48ms
+00:04:46.555 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:04:46.557 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:04:46.558 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 54ms
+00:04:46.558 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 54ms
+00:04:46.854 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:04:46.857 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 50ms
+00:04:46.870 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:04:46.872 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 156ms
+00:04:46.946 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:04:46.948 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 148ms
+00:04:46.961 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:04:46.963 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 157ms
+00:04:47.195 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:04:47.198 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:04:47.199 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 58ms
+00:04:47.200 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 60ms
+00:04:48.905 [eventLoopGroupProxy-4-6] DEBUG Exposed - INSERT INTO borrowings_to_role (date_answer_to_request, date_request_from, res_answer_to_request, role_id, user_id) VALUES (NULL, '2025-06-02T21:04:00', NULL, 2, 4)
+00:04:48.921 [eventLoopGroupProxy-4-6] DEBUG Application - [32m201 Created[m: [36mPOST[m - /borrowings-to-role in 78ms
+00:04:59.369 [eventLoopGroupProxy-4-9] INFO  UserRoutes - Received request to get all users
+00:04:59.370 [eventLoopGroupProxy-4-9] INFO  UserService - Getting all users
+00:04:59.370 [eventLoopGroupProxy-4-9] INFO  UserRepository - Getting all users from database
+00:04:59.426 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:04:59.426 [eventLoopGroupProxy-4-10] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:04:59.428 [eventLoopGroupProxy-4-10] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 59ms
+00:04:59.428 [eventLoopGroupProxy-4-9] INFO  UserRepository - Found 6 users
+00:04:59.430 [eventLoopGroupProxy-4-9] INFO  UserRoutes - Successfully retrieved 6 users
+00:04:59.434 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 65ms
+00:04:59.615 [eventLoopGroupProxy-4-10] INFO  UserRoutes - Received request to get all users
+00:04:59.615 [eventLoopGroupProxy-4-10] INFO  UserService - Getting all users
+00:04:59.615 [eventLoopGroupProxy-4-10] INFO  UserRepository - Getting all users from database
+00:04:59.662 [eventLoopGroupProxy-4-10] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:04:59.663 [eventLoopGroupProxy-4-10] INFO  UserRepository - Found 6 users
+00:04:59.664 [eventLoopGroupProxy-4-10] INFO  UserRoutes - Successfully retrieved 6 users
+00:04:59.664 [eventLoopGroupProxy-4-10] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 49ms
+00:04:59.818 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:04:59.820 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 153ms
+00:05:24.598 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /users/4 in 0ms
+00:05:24.807 [eventLoopGroupProxy-4-9] DEBUG Application - [31m404 Not Found[m: [36mPUT[m - /users/4 in 0ms
+00:06:31.504 [eventLoopGroupProxy-4-11] INFO  UserRoutes - Received request to get all users
+00:06:31.504 [eventLoopGroupProxy-4-11] INFO  UserService - Getting all users
+00:06:31.504 [eventLoopGroupProxy-4-11] INFO  UserRepository - Getting all users from database
+00:06:31.545 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:06:31.546 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:06:31.546 [eventLoopGroupProxy-4-11] INFO  UserRepository - Found 6 users
+00:06:31.546 [eventLoopGroupProxy-4-11] INFO  UserRoutes - Successfully retrieved 6 users
+00:06:31.546 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 46ms
+00:06:31.547 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 43ms
+00:06:31.757 [eventLoopGroupProxy-4-9] INFO  UserRoutes - Received request to get all users
+00:06:31.758 [eventLoopGroupProxy-4-9] INFO  UserService - Getting all users
+00:06:31.758 [eventLoopGroupProxy-4-9] INFO  UserRepository - Getting all users from database
+00:06:31.803 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:06:31.803 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:06:31.803 [eventLoopGroupProxy-4-9] INFO  UserRepository - Found 6 users
+00:06:31.804 [eventLoopGroupProxy-4-9] INFO  UserRoutes - Successfully retrieved 6 users
+00:06:31.804 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 47ms
+00:06:31.804 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 47ms
+00:07:22.150 [eventLoopGroupProxy-4-9] DEBUG Application - [31m404 Not Found[m: [36mPUT[m - /users/4 in 0ms
+00:09:15.362 [eventLoopGroupProxy-3-3] DEBUG io.netty.buffer.PoolThreadCache - Freed 6 thread-local buffer(s) from thread: eventLoopGroupProxy-3-3
+00:09:15.362 [eventLoopGroupProxy-3-4] DEBUG io.netty.buffer.PoolThreadCache - Freed 7 thread-local buffer(s) from thread: eventLoopGroupProxy-3-4
+00:09:15.363 [eventLoopGroupProxy-3-2] DEBUG io.netty.buffer.PoolThreadCache - Freed 8 thread-local buffer(s) from thread: eventLoopGroupProxy-3-2
+00:09:15.362 [eventLoopGroupProxy-3-1] DEBUG io.netty.buffer.PoolThreadCache - Freed 6 thread-local buffer(s) from thread: eventLoopGroupProxy-3-1
+00:09:15.362 [eventLoopGroupProxy-3-6] DEBUG io.netty.buffer.PoolThreadCache - Freed 5 thread-local buffer(s) from thread: eventLoopGroupProxy-3-6
+00:09:15.362 [eventLoopGroupProxy-3-5] DEBUG io.netty.buffer.PoolThreadCache - Freed 4 thread-local buffer(s) from thread: eventLoopGroupProxy-3-5
+00:09:15.362 [eventLoopGroupProxy-3-7] DEBUG io.netty.buffer.PoolThreadCache - Freed 4 thread-local buffer(s) from thread: eventLoopGroupProxy-3-7
+00:09:16.446 [KtorShutdownHook] DEBUG Application - Application stopping: io.ktor.server.application.Application@15fdd1f2
+00:09:16.447 [KtorShutdownHook] DEBUG Application - Application stopped: io.ktor.server.application.Application@15fdd1f2
+00:09:16.447 [KtorShutdownHook] INFO  Application - Application stopped
+00:11:04.517 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+00:11:05.075 [main] INFO  Application - Application started in 0.592 seconds.
+00:11:05.076 [main] DEBUG Application - Application started: io.ktor.server.application.Application@15fdd1f2
+00:11:05.076 [main] INFO  Application - Application started: false
+00:11:05.080 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+00:11:05.096 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+00:11:05.096 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+00:11:05.096 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+00:11:05.097 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+00:11:05.097 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+00:11:05.097 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+00:11:05.098 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+00:11:05.098 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+00:11:05.099 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1e802ef9
+00:11:05.099 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+00:11:05.099 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+00:11:05.101 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\Ntditl\AppData\Local\Temp (java.io.tmpdir)
+00:11:05.101 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+00:11:05.101 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+00:11:05.102 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+00:11:05.102 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+00:11:05.102 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+00:11:05.102 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+00:11:05.126 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+00:11:05.133 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+00:11:05.137 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+00:11:05.137 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+00:11:05.140 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+00:11:05.140 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+00:11:05.147 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+00:11:05.183 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 9208 (auto-detected)
+00:11:05.186 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+00:11:05.186 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+00:11:05.193 [main] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+00:11:05.194 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+00:11:05.208 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: d4:93:90:ff:fe:15:0a:e2 (auto-detected)
+00:11:05.216 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+00:11:05.216 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+00:11:05.230 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+00:11:05.230 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+00:11:05.231 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+00:11:05.240 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+00:11:05.240 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+00:11:05.240 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+00:11:05.241 [main] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+00:11:05.253 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://127.0.0.1:8080
+00:11:10.229 [eventLoopGroupProxy-3-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+00:11:10.229 [eventLoopGroupProxy-3-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+00:11:10.230 [eventLoopGroupProxy-3-1] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6570e53d
+00:11:10.261 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+00:11:10.261 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+00:11:10.261 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+00:11:10.261 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+00:11:10.261 [eventLoopGroupProxy-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+00:11:10.320 [eventLoopGroupProxy-4-1] INFO  UserRoutes - Received request to get all users
+00:11:10.320 [eventLoopGroupProxy-4-1] INFO  UserService - Getting all users
+00:11:10.320 [eventLoopGroupProxy-4-1] INFO  UserRepository - Getting all users from database
+00:11:10.413 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:11:10.413 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:11:10.417 [eventLoopGroupProxy-4-1] INFO  UserRepository - Found 6 users
+00:11:10.418 [eventLoopGroupProxy-4-1] INFO  UserRoutes - Successfully retrieved 6 users
+00:11:10.537 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 235ms
+00:11:10.537 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 235ms
+00:11:10.678 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:11:10.680 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 43ms
+00:11:10.729 [eventLoopGroupProxy-4-2] INFO  UserRoutes - Received request to get all users
+00:11:10.729 [eventLoopGroupProxy-4-2] INFO  UserService - Getting all users
+00:11:10.729 [eventLoopGroupProxy-4-2] INFO  UserRepository - Getting all users from database
+00:11:10.878 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:11:10.878 [eventLoopGroupProxy-4-2] INFO  UserRepository - Found 6 users
+00:11:10.878 [eventLoopGroupProxy-4-2] INFO  UserRoutes - Successfully retrieved 6 users
+00:11:10.879 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 150ms
+00:11:13.067 [eventLoopGroupProxy-4-2] INFO  UserService - Updating user with ID: 4
+00:11:13.068 [eventLoopGroupProxy-4-2] INFO  UserRepository - Updating user with ID: 4 in database
+00:11:13.127 [eventLoopGroupProxy-4-2] DEBUG Exposed - UPDATE users SET role_id=2 WHERE users.user_id = 4
+00:11:13.132 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mPUT[m - /users/4 in 145ms
+00:11:13.290 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role/38 in 1ms
+00:11:13.613 [eventLoopGroupProxy-4-2] DEBUG Exposed - UPDATE borrowings_to_role SET date_answer_to_request='2025-06-02T21:11:00', res_answer_to_request=TRUE WHERE borrowings_to_role.role_reservation_id = 38
+00:11:13.614 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mPUT[m - /borrowings-to-role/38 in 159ms
+00:11:23.027 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:11:23.027 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:11:23.028 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 158ms
+00:11:23.033 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 163ms
+00:11:23.242 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:11:23.244 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 43ms
+00:11:23.331 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:11:23.334 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:11:23.338 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 55ms
+00:11:23.340 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 57ms
+00:11:23.422 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:11:23.424 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 156ms
+00:11:23.770 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:11:23.772 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 42ms
+00:11:23.792 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:11:23.794 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 46ms
+00:12:08.919 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:12:08.921 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 145ms
+00:12:09.276 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:12:09.278 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 38ms
+00:12:09.470 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:12:09.472 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 40ms
+00:12:42.791 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /auth/register in 0ms
+00:12:42.996 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Received registration request
+00:12:43.057 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Parsed registration request for email: user2@user.com
+00:12:43.059 [eventLoopGroupProxy-4-7] INFO  AuthService - Starting registration for email: user2@user.com
+00:12:43.060 [eventLoopGroupProxy-4-7] INFO  UserRepository - Searching for user by email: user2@user.com
+00:12:43.230 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.email = 'user2@user.com'
+00:12:43.231 [eventLoopGroupProxy-4-7] INFO  UserRepository - User not found
+00:12:43.303 [eventLoopGroupProxy-4-7] INFO  AuthService - Password hashed successfully
+00:12:43.303 [eventLoopGroupProxy-4-7] INFO  AuthService - Created UserDTO object
+00:12:43.303 [eventLoopGroupProxy-4-7] INFO  UserRepository - Starting database transaction to create user: user2@user.com
+00:12:43.462 [eventLoopGroupProxy-4-7] DEBUG Exposed - INSERT INTO users ("PasswordHash", email, first_name, is_active, last_name, phone, role_id) VALUES ('$2a$10$6U6V.NzcO47mxxSlgrRW8O04FW2W88tdhqqwkhncv8rRw0QgLWwwm', 'user2@user.com', 'Данис', TRUE, 'Валирахманов', '12345', 1)
+00:12:43.463 [eventLoopGroupProxy-4-7] INFO  UserRepository - User created in database with ID: 7
+00:12:43.464 [eventLoopGroupProxy-4-7] INFO  AuthService - User created in database with ID: 7
+00:12:43.464 [eventLoopGroupProxy-4-7] INFO  UserRepository - Searching for user by ID: 7
+00:12:43.512 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.user_id = 7
+00:12:43.512 [eventLoopGroupProxy-4-7] INFO  UserRepository - User found
+00:12:43.513 [eventLoopGroupProxy-4-7] INFO  AuthService - Retrieved created user from database
+00:12:43.727 [eventLoopGroupProxy-4-7] INFO  AuthService - JWT token generated successfully
+00:12:43.729 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - User registered successfully
+00:12:43.733 [eventLoopGroupProxy-4-7] DEBUG Application - [32m201 Created[m: [36mPOST[m - /auth/register in 737ms
+00:12:53.591 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /auth/login in 0ms
+00:12:53.756 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Received login request
+00:12:53.761 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - Parsed login request for email: user2@user.com
+00:12:53.761 [eventLoopGroupProxy-4-7] INFO  AuthService - Starting login for email: user2@user.com
+00:12:53.761 [eventLoopGroupProxy-4-7] INFO  UserRepository - Searching for user with password hash by email: user2@user.com
+00:12:53.807 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users WHERE users.email = 'user2@user.com'
+00:12:53.807 [eventLoopGroupProxy-4-7] INFO  UserRepository - User with password hash found
+00:12:53.808 [eventLoopGroupProxy-4-7] INFO  AuthService - User found in database
+00:12:53.867 [eventLoopGroupProxy-4-7] INFO  AuthService - Password verified successfully
+00:12:53.870 [eventLoopGroupProxy-4-7] INFO  AuthService - JWT token generated successfully
+00:12:53.870 [eventLoopGroupProxy-4-7] INFO  AuthRoutes - User logged in successfully
+00:12:53.870 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mPOST[m - /auth/login in 114ms
+00:12:54.289 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:12:54.292 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 149ms
+00:12:54.524 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:12:54.526 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 78ms
+00:13:12.263 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 1ms
+00:13:12.407 [eventLoopGroupProxy-4-10] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role in 0ms
+00:13:12.407 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role in 0ms
+00:13:12.407 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 0ms
+00:13:12.616 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:13:12.617 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 150ms
+00:13:12.706 [eventLoopGroupProxy-4-10] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:13:12.707 [eventLoopGroupProxy-4-10] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 40ms
+00:13:13.098 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:13:13.099 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:13:13.100 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 164ms
+00:13:13.101 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 159ms
+00:13:57.586 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:13:57.587 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 45ms
+00:13:57.593 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:13:57.595 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 44ms
+00:13:57.862 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:13:57.863 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 39ms
+00:13:57.956 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:13:57.957 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 146ms
+00:14:03.860 [eventLoopGroupProxy-4-11] INFO  UserRoutes - Received request to get all users
+00:14:03.860 [eventLoopGroupProxy-4-11] INFO  UserService - Getting all users
+00:14:03.860 [eventLoopGroupProxy-4-11] INFO  UserRepository - Getting all users from database
+00:14:04.010 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:14:04.010 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:14:04.010 [eventLoopGroupProxy-4-11] INFO  UserRepository - Found 7 users
+00:14:04.011 [eventLoopGroupProxy-4-11] INFO  UserRoutes - Successfully retrieved 7 users
+00:14:04.011 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 149ms
+00:14:04.011 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 152ms
+00:14:04.219 [eventLoopGroupProxy-4-12] INFO  UserRoutes - Received request to get all users
+00:14:04.219 [eventLoopGroupProxy-4-12] INFO  UserService - Getting all users
+00:14:04.219 [eventLoopGroupProxy-4-12] INFO  UserRepository - Getting all users from database
+00:14:04.264 [eventLoopGroupProxy-4-11] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:14:04.265 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:14:04.265 [eventLoopGroupProxy-4-12] INFO  UserRepository - Found 7 users
+00:14:04.265 [eventLoopGroupProxy-4-12] INFO  UserRoutes - Successfully retrieved 7 users
+00:14:04.265 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 47ms
+00:14:04.265 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 46ms
+00:21:16.423 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:21:16.423 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:21:16.424 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 44ms
+00:21:16.424 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 48ms
+00:21:16.668 [eventLoopGroupProxy-4-2] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:21:16.669 [eventLoopGroupProxy-4-2] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 42ms
+00:21:16.678 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:21:16.679 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 44ms
+00:21:24.505 [eventLoopGroupProxy-4-1] DEBUG Application - Unhandled: POST - /borrowings-to-role. Exception class io.ktor.server.plugins.BadRequestException: Failed to convert request body to class com.library.models.CreateBorrowingsToRoleDTO
+io.ktor.server.plugins.BadRequestException: Failed to convert request body to class com.library.models.CreateBorrowingsToRoleDTO
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:69)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.access$convertBody(RequestConverter.kt:1)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertBody$1.invokeSuspend(RequestConverter.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: io.ktor.serialization.JsonConvertException: Illegal input: Text '2025-06-02T21:21:20.183Z' could not be parsed, unparsed text found at index 23
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:90)
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter$deserialize$1.invokeSuspend(KotlinxSerializationConverter.kt)
+	... 11 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '2025-06-02T21:21:20.183Z' could not be parsed, unparsed text found at index 23
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2055)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:479)
+	at com.library.models.LocalDateTimeSerializer.deserialize(BorrowingDTO.kt:88)
+	at com.library.models.LocalDateTimeSerializer.deserialize(BorrowingDTO.kt:80)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at com.library.models.CreateBorrowingsToRoleDTO$$serializer.deserialize(BorrowingDTO.kt:61)
+	at com.library.models.CreateBorrowingsToRoleDTO$$serializer.deserialize(BorrowingDTO.kt:61)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:107)
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:82)
+	... 12 common frames omitted
+00:21:24.507 [eventLoopGroupProxy-4-1] DEBUG Application - [31m400 Bad Request[m: [36mPOST[m - /borrowings-to-role in 11ms
+00:21:48.393 [eventLoopGroupProxy-4-3] INFO  UserRoutes - Received request to get all users
+00:21:48.394 [eventLoopGroupProxy-4-3] INFO  UserService - Getting all users
+00:21:48.394 [eventLoopGroupProxy-4-3] INFO  UserRepository - Getting all users from database
+00:21:48.439 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:21:48.439 [eventLoopGroupProxy-4-3] INFO  UserRepository - Found 7 users
+00:21:48.439 [eventLoopGroupProxy-4-3] INFO  UserRoutes - Successfully retrieved 7 users
+00:21:48.441 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 48ms
+00:21:48.443 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:21:48.444 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 51ms
+00:21:48.596 [eventLoopGroupProxy-4-4] INFO  UserRoutes - Received request to get all users
+00:21:48.596 [eventLoopGroupProxy-4-4] INFO  UserService - Getting all users
+00:21:48.596 [eventLoopGroupProxy-4-4] INFO  UserRepository - Getting all users from database
+00:21:48.638 [eventLoopGroupProxy-4-4] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:21:48.638 [eventLoopGroupProxy-4-4] INFO  UserRepository - Found 7 users
+00:21:48.639 [eventLoopGroupProxy-4-4] INFO  UserRoutes - Successfully retrieved 7 users
+00:21:48.639 [eventLoopGroupProxy-4-4] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 43ms
+00:21:48.752 [eventLoopGroupProxy-4-3] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:21:48.754 [eventLoopGroupProxy-4-3] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 141ms
+00:21:56.106 [eventLoopGroupProxy-4-1] DEBUG Application - Unhandled: POST - /borrowings-to-role. Exception class io.ktor.server.plugins.BadRequestException: Failed to convert request body to class com.library.models.CreateBorrowingsToRoleDTO
+io.ktor.server.plugins.BadRequestException: Failed to convert request body to class com.library.models.CreateBorrowingsToRoleDTO
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:69)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.access$convertBody(RequestConverter.kt:1)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invokeSuspend(RequestConverter.kt:40)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.OnCallReceiveContext.transformBody(KtorCallContexts.kt:65)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invokeSuspend(RequestConverter.kt:28)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invokeSuspend(PluginBuilder.kt:163)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invokeSuspend(PluginBuilder.kt:107)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invokeSuspend(PluginBuilder.kt:215)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invokeSuspend(PluginBuilder.kt:198)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.debug.ContextUtilsKt.addToContextInDebugMode(ContextUtils.kt:30)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invokeSuspend(PluginBuilder.kt:194)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveNullable(ApplicationReceiveFunctions.kt:103)
+	at com.library.routes.BorrowingsToRoleRoutesKt$borrowingsToRoleRoutes$1$3.invokeSuspend(BorrowingsToRoleRoutes.kt:76)
+	at com.library.routes.BorrowingsToRoleRoutesKt$borrowingsToRoleRoutes$1$3.invoke(BorrowingsToRoleRoutes.kt)
+	at com.library.routes.BorrowingsToRoleRoutesKt$borrowingsToRoleRoutes$1$3.invoke(BorrowingsToRoleRoutes.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invokeSuspend(Route.kt:116)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.routing.Routing.executeResult(Routing.kt:190)
+	at io.ktor.server.routing.Routing.interceptor(Routing.kt:64)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invokeSuspend(Routing.kt:140)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:124)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invokeSuspend(DefaultEnginePipeline.kt:123)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invokeSuspend(NettyApplicationCallHandler.kt:119)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at io.ktor.server.netty.NettyApplicationCallHandler.handleRequest(NettyApplicationCallHandler.kt:37)
+	at io.ktor.server.netty.NettyApplicationCallHandler.channelRead(NettyApplicationCallHandler.kt:29)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.access$600(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$7.run(AbstractChannelHandlerContext.java:425)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: io.ktor.serialization.JsonConvertException: Illegal input: Text '2025-06-02T21:21:51.788Z' could not be parsed, unparsed text found at index 23
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:90)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:67)
+	... 94 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '2025-06-02T21:21:51.788Z' could not be parsed, unparsed text found at index 23
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2055)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494)
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:479)
+	at com.library.models.LocalDateTimeSerializer.deserialize(BorrowingDTO.kt:88)
+	at com.library.models.LocalDateTimeSerializer.deserialize(BorrowingDTO.kt:80)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at com.library.models.CreateBorrowingsToRoleDTO$$serializer.deserialize(BorrowingDTO.kt:61)
+	at com.library.models.CreateBorrowingsToRoleDTO$$serializer.deserialize(BorrowingDTO.kt:61)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:107)
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:82)
+	... 95 common frames omitted
+00:21:56.107 [eventLoopGroupProxy-4-1] DEBUG Application - [31m400 Bad Request[m: [36mPOST[m - /borrowings-to-role in 2ms
+00:23:18.113 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:23:18.114 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 43ms
+00:23:18.175 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:23:18.177 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 42ms
+00:23:18.317 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:23:18.318 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 44ms
+00:23:18.385 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:23:18.387 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 44ms
+00:23:19.540 [eventLoopGroupProxy-4-1] DEBUG Exposed - INSERT INTO borrowings_to_role (date_answer_to_request, date_request_from, res_answer_to_request, role_id, user_id) VALUES (NULL, '2025-06-02T21:23:00', NULL, 2, 7)
+00:23:19.554 [eventLoopGroupProxy-4-1] DEBUG Application - [32m201 Created[m: [36mPOST[m - /borrowings-to-role in 173ms
+00:23:45.097 [eventLoopGroupProxy-4-6] INFO  UserRoutes - Received request to get all users
+00:23:45.097 [eventLoopGroupProxy-4-6] INFO  UserService - Getting all users
+00:23:45.097 [eventLoopGroupProxy-4-6] INFO  UserRepository - Getting all users from database
+00:23:45.136 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:23:45.137 [eventLoopGroupProxy-4-6] INFO  UserRepository - Found 7 users
+00:23:45.137 [eventLoopGroupProxy-4-6] INFO  UserRoutes - Successfully retrieved 7 users
+00:23:45.138 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 40ms
+00:23:45.200 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:23:45.202 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 39ms
+00:23:45.376 [eventLoopGroupProxy-4-7] INFO  UserRoutes - Received request to get all users
+00:23:45.376 [eventLoopGroupProxy-4-7] INFO  UserService - Getting all users
+00:23:45.376 [eventLoopGroupProxy-4-7] INFO  UserRepository - Getting all users from database
+00:23:45.413 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:23:45.414 [eventLoopGroupProxy-4-7] INFO  UserRepository - Found 7 users
+00:23:45.414 [eventLoopGroupProxy-4-7] INFO  UserRoutes - Successfully retrieved 7 users
+00:23:45.415 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 40ms
+00:23:45.573 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:23:45.574 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 141ms
+00:23:49.661 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role/39 in 0ms
+00:23:49.850 [eventLoopGroupProxy-4-6] DEBUG Exposed - UPDATE borrowings_to_role SET date_answer_to_request='2025-06-02T21:23:00', res_answer_to_request=FALSE WHERE borrowings_to_role.role_reservation_id = 39
+00:23:49.857 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mPUT[m - /borrowings-to-role/39 in 45ms
+00:24:02.467 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:24:02.468 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 46ms
+00:24:02.475 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:24:02.476 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 46ms
+00:24:02.736 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:24:02.737 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 44ms
+00:24:02.739 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:24:02.740 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 41ms
+00:24:10.800 [eventLoopGroupProxy-4-1] DEBUG Exposed - INSERT INTO borrowings_to_role (date_answer_to_request, date_request_from, res_answer_to_request, role_id, user_id) VALUES (NULL, '2025-06-02T21:24:00', NULL, 2, 7)
+00:24:10.802 [eventLoopGroupProxy-4-1] DEBUG Application - [32m201 Created[m: [36mPOST[m - /borrowings-to-role in 43ms
+00:24:16.907 [eventLoopGroupProxy-4-6] INFO  UserRoutes - Received request to get all users
+00:24:16.907 [eventLoopGroupProxy-4-6] INFO  UserService - Getting all users
+00:24:16.907 [eventLoopGroupProxy-4-6] INFO  UserRepository - Getting all users from database
+00:24:16.949 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:24:16.949 [eventLoopGroupProxy-4-6] INFO  UserRepository - Found 7 users
+00:24:16.949 [eventLoopGroupProxy-4-6] INFO  UserRoutes - Successfully retrieved 7 users
+00:24:16.951 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 44ms
+00:24:16.952 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:24:16.953 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 40ms
+00:24:17.162 [eventLoopGroupProxy-4-6] INFO  UserRoutes - Received request to get all users
+00:24:17.162 [eventLoopGroupProxy-4-6] INFO  UserService - Getting all users
+00:24:17.163 [eventLoopGroupProxy-4-6] INFO  UserRepository - Getting all users from database
+00:24:17.206 [eventLoopGroupProxy-4-7] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:24:17.206 [eventLoopGroupProxy-4-6] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:24:17.206 [eventLoopGroupProxy-4-6] INFO  UserRepository - Found 7 users
+00:24:17.206 [eventLoopGroupProxy-4-6] INFO  UserRoutes - Successfully retrieved 7 users
+00:24:17.207 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 45ms
+00:24:17.207 [eventLoopGroupProxy-4-7] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 46ms
+00:24:19.953 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /users/7 in 1ms
+00:24:20.111 [eventLoopGroupProxy-4-6] INFO  UserService - Updating user with ID: 7
+00:24:20.111 [eventLoopGroupProxy-4-6] INFO  UserRepository - Updating user with ID: 7 in database
+00:24:20.265 [eventLoopGroupProxy-4-6] DEBUG Exposed - UPDATE users SET role_id=2 WHERE users.user_id = 7
+00:24:20.267 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mPUT[m - /users/7 in 163ms
+00:24:20.419 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings-to-role/40 in 1ms
+00:24:20.724 [eventLoopGroupProxy-4-6] DEBUG Exposed - UPDATE borrowings_to_role SET date_answer_to_request='2025-06-02T21:24:00', res_answer_to_request=TRUE WHERE borrowings_to_role.role_reservation_id = 40
+00:24:20.726 [eventLoopGroupProxy-4-6] DEBUG Application - [32m200 OK[m: [36mPUT[m - /borrowings-to-role/40 in 148ms
+00:24:24.836 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:24:24.837 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 45ms
+00:24:24.840 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:24:24.841 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 41ms
+00:24:25.090 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings_to_role.role_reservation_id, borrowings_to_role.role_id, borrowings_to_role.user_id, borrowings_to_role.date_request_from, borrowings_to_role.date_answer_to_request, borrowings_to_role.res_answer_to_request FROM borrowings_to_role
+00:24:25.092 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings-to-role in 47ms
+00:24:25.092 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:24:25.094 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 49ms
+00:24:49.938 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 0ms
+00:24:49.945 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /borrowings in 0ms
+00:24:50.009 [eventLoopGroupProxy-4-10] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /users in 1ms
+00:24:50.015 [eventLoopGroupProxy-4-11] DEBUG Application - [32m200 OK[m: [36mOPTIONS[m - /users in 0ms
+00:24:50.064 [eventLoopGroupProxy-4-9] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:24:50.064 [eventLoopGroupProxy-4-9] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 58ms
+00:24:50.068 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:24:50.070 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 64ms
+00:24:50.209 [eventLoopGroupProxy-4-8] INFO  UserRoutes - Received request to get all users
+00:24:50.209 [eventLoopGroupProxy-4-8] INFO  UserService - Getting all users
+00:24:50.209 [eventLoopGroupProxy-4-8] INFO  UserRepository - Getting all users from database
+00:24:50.245 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:24:50.246 [eventLoopGroupProxy-4-8] INFO  UserRepository - Found 7 users
+00:24:50.246 [eventLoopGroupProxy-4-8] INFO  UserRoutes - Successfully retrieved 7 users
+00:24:50.246 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 37ms
+00:24:50.283 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:24:50.285 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 142ms
+00:24:50.319 [eventLoopGroupProxy-4-1] DEBUG Exposed - SELECT books.book_id, books.title, books.author, books.isbn, books.publication_year, books.publisher, books.genre, books.description, books.keywords, books.cover_url FROM books
+00:24:50.320 [eventLoopGroupProxy-4-1] DEBUG Application - [32m200 OK[m: [36mGET[m - /books in 50ms
+00:24:50.325 [eventLoopGroupProxy-4-12] DEBUG Exposed - SELECT book_copies.copy_id, book_copies.book_id, book_copies.is_in_here, book_copies.is_in_reservation FROM book_copies
+00:24:50.326 [eventLoopGroupProxy-4-12] DEBUG Application - [32m200 OK[m: [36mGET[m - /book-copies in 48ms
+00:24:50.397 [eventLoopGroupProxy-4-5] INFO  UserRoutes - Received request to get all users
+00:24:50.397 [eventLoopGroupProxy-4-5] INFO  UserService - Getting all users
+00:24:50.397 [eventLoopGroupProxy-4-5] INFO  UserRepository - Getting all users from database
+00:24:50.436 [eventLoopGroupProxy-4-5] DEBUG Exposed - SELECT users.user_id, users.email, users.first_name, users.last_name, users.phone, users.role_id, users.is_active, users."PasswordHash" FROM users
+00:24:50.436 [eventLoopGroupProxy-4-5] INFO  UserRepository - Found 7 users
+00:24:50.436 [eventLoopGroupProxy-4-5] INFO  UserRoutes - Successfully retrieved 7 users
+00:24:50.437 [eventLoopGroupProxy-4-5] DEBUG Application - [32m200 OK[m: [36mGET[m - /users in 40ms
+00:24:50.471 [eventLoopGroupProxy-4-8] DEBUG Exposed - SELECT borrowings.reservation_id, borrowings.book_copy_id, borrowings.user_id, borrowings.date_request_from_user, borrowings.date_answer_to_request, borrowings.res_answer_to_user, borrowings.date_of_start_of_issuance, borrowings.date_to_return FROM borrowings
+00:24:50.473 [eventLoopGroupProxy-4-8] DEBUG Application - [32m200 OK[m: [36mGET[m - /borrowings in 39ms

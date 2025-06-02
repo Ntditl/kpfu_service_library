@@ -46,6 +46,37 @@ data class CreateBorrowingByBookRequest(
     val date_request_from_user: String
 )
 
+@Serializable
+data class BorrowingsToRoleDTO(
+    val role_reservation_id: Int? = null,
+    val role_id: Int,
+    val user_id: Int,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_request_from: LocalDateTime,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_answer_to_request: LocalDateTime? = null,
+    val res_answer_to_request: Boolean? = null
+)
+
+@Serializable
+data class CreateBorrowingsToRoleDTO(
+    val role_id: Int,
+    val user_id: Int,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_request_from: LocalDateTime
+)
+
+@Serializable
+data class UpdateBorrowingsToRoleDTO(
+    val role_id: Int? = null,
+    val user_id: Int? = null,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_request_from: LocalDateTime? = null,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_answer_to_request: LocalDateTime? = null,
+    val res_answer_to_request: Boolean? = null
+)
+
 class LocalDateTimeSerializer : KSerializer<LocalDateTime> {
     override val descriptor = PrimitiveSerialDescriptor("LocalDateTime", PrimitiveKind.STRING)
 

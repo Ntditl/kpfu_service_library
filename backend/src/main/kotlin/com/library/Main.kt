@@ -1,11 +1,6 @@
 package com.library
 import com.library.database.DatabaseFactory
-import com.library.routes.roleRoutes
-import com.library.routes.bookRoutes
-import com.library.routes.authRoutes
-import com.library.routes.userRoutes
-import com.library.routes.bookCopyRoutes
-import com.library.routes.borrowingRoutes
+import com.library.routes.*
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
@@ -72,6 +67,7 @@ fun Application.module() {
         userRoutes()
         bookCopyRoutes()
         borrowingRoutes()
+        borrowingsToRoleRoutes()
     }
 
     DatabaseFactory.init(environment)

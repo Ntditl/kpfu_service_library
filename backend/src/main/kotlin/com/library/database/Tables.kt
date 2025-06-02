@@ -61,3 +61,14 @@ object Borrowings : Table("borrowings") {
 
     override val primaryKey = PrimaryKey(reservationId)
 }
+
+object BorrowingsToRole : Table("borrowings_to_role") {
+    val roleReservationId = integer("role_reservation_id").autoIncrement()
+    val roleId = integer("role_id").references(Roles.roleId)
+    val userId = integer("user_id").references(Users.userId)
+    val dateRequestFrom = datetime("date_request_from")
+    val dateAnswerToRequest = datetime("date_answer_to_request").nullable()
+    val resAnswerToRequest = bool("res_answer_to_request").nullable()
+
+    override val primaryKey = PrimaryKey(roleReservationId)
+}
