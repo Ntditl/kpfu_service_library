@@ -47,6 +47,12 @@ data class CreateBorrowingByBookRequest(
 )
 
 @Serializable
+data class UpdateBorrowingReturnDateDTO(
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val date_to_return: LocalDateTime
+)
+
+@Serializable
 data class BorrowingsToRoleDTO(
     val role_reservation_id: Int? = null,
     val role_id: Int,

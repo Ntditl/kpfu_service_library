@@ -2,6 +2,7 @@ package com.library.routes
 
 import com.library.models.BorrowingDTO
 import com.library.models.UpdateBorrowingDTO
+import com.library.models.UpdateBorrowingReturnDateDTO
 import com.library.services.BorrowingService
 import io.ktor.server.application.*
 import io.ktor.server.response.*
@@ -100,6 +101,27 @@ fun Route.borrowingRoutes() {
             } catch (e: Exception) {
                 call.application.environment.log.error("Error updating borrowing", e)
                 call.respond(HttpStatusCode.BadRequest, "Error updating borrowing: ${e.message}")
+            }
+        }
+
+        put("/{id}/return-date") {
+            val id = call.parameters["id"]?.toIntOrNull()
+            if (id == null) {
+                call.respond(HttpStatusCode.BadRequest, "Invalid ID")
+                return@put
+            }
+
+            try {
+                val dto = call.receive<UpdateBorrowingReturnDateDTO>()
+                val updated = service.updateReturnDate(id, dto)
+                if (updated) {
+                    call.respond(HttpStatusCode.OK)
+                } else {
+                    call.respond(HttpStatusCode.NotFound, "Borrowing not found")
+                }
+            } catch (e: Exception) {
+                call.application.environment.log.error("Error updating borrowing return date", e)
+                call.respond(HttpStatusCode.BadRequest, "Error updating borrowing return date: ${e.message}")
             }
         }
 

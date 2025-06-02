@@ -3,6 +3,7 @@ package com.library.routes
 import com.library.models.BookCopyDTO
 import com.library.models.UpdateBookCopyReservationDTO
 import com.library.models.UpdateBookCopyLocationDTO
+import com.library.models.UpdateBookCopyBorrowedStatusDTO
 import com.library.services.BookCopyService
 import io.ktor.server.application.*
 import io.ktor.server.response.*
@@ -81,6 +82,22 @@ fun Route.bookCopyRoutes() {
 
             val dto = call.receive<UpdateBookCopyLocationDTO>()
             val updated = service.updateLocation(id, dto)
+            if (updated) {
+                call.respond(HttpStatusCode.OK)
+            } else {
+                call.respond(HttpStatusCode.NotFound, "Book copy not found")
+            }
+        }
+
+        put("/{id}/borrowed-status") {
+            val id = call.parameters["id"]?.toIntOrNull()
+            if (id == null) {
+                call.respond(HttpStatusCode.BadRequest, "Invalid ID")
+                return@put
+            }
+
+            val dto = call.receive<UpdateBookCopyBorrowedStatusDTO>()
+            val updated = service.updateBorrowedStatus(id, dto)
             if (updated) {
                 call.respond(HttpStatusCode.OK)
             } else {

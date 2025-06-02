@@ -14,7 +14,8 @@ class BookCopyRepository {
                 copy_id = it[BookCopies.copyId],
                 book_id = it[BookCopies.bookId],
                 is_in_here = it[BookCopies.isInHere],
-                is_in_reservation = it[BookCopies.isInReservation]
+                is_in_reservation = it[BookCopies.isInReservation],
+                borrowed_By_Other_User = it[BookCopies.isInBorrowedByUser]
             )
         }
     }
@@ -26,7 +27,8 @@ class BookCopyRepository {
                     copy_id = it[BookCopies.copyId],
                     book_id = it[BookCopies.bookId],
                     is_in_here = it[BookCopies.isInHere],
-                    is_in_reservation = it[BookCopies.isInReservation]
+                    is_in_reservation = it[BookCopies.isInReservation],
+                    borrowed_By_Other_User = it[BookCopies.isInBorrowedByUser]
                 )
             }
             .singleOrNull()
@@ -37,6 +39,7 @@ class BookCopyRepository {
             it[bookId] = bookCopy.book_id
             it[isInHere] = bookCopy.is_in_here
             it[isInReservation] = bookCopy.is_in_reservation
+            it[BookCopies.isInBorrowedByUser] = bookCopy.borrowed_By_Other_User ?: false
         } get BookCopies.copyId
     }
 
@@ -45,6 +48,7 @@ class BookCopyRepository {
             it[bookId] = bookCopy.book_id
             it[isInHere] = bookCopy.is_in_here
             it[isInReservation] = bookCopy.is_in_reservation
+            bookCopy.borrowed_By_Other_User?.let { borrowedStatus -> it[BookCopies.isInBorrowedByUser] = borrowedStatus }
         } > 0
     }
 
@@ -61,6 +65,12 @@ class BookCopyRepository {
     fun updateLocation(id: Int, isInHere: Boolean): Boolean = transaction {
         BookCopies.update({ BookCopies.copyId eq id }) { stmt ->
             stmt[BookCopies.isInHere] = isInHere
+        } > 0
+    }
+
+    fun updateBorrowedStatus(id: Int, borrowedByOtherUser: Boolean): Boolean = transaction {
+        BookCopies.update({ BookCopies.copyId eq id }) { stmt ->
+            stmt[BookCopies.isInBorrowedByUser] = borrowedByOtherUser
         } > 0
     }
 } 

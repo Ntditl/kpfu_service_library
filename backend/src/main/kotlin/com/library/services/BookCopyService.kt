@@ -3,6 +3,7 @@ package com.library.services
 import com.library.models.BookCopyDTO
 import com.library.models.UpdateBookCopyReservationDTO
 import com.library.models.UpdateBookCopyLocationDTO
+import com.library.models.UpdateBookCopyBorrowedStatusDTO
 import com.library.repositories.BookCopyRepository
 
 class BookCopyService(
@@ -42,5 +43,10 @@ class BookCopyService(
     fun updateLocation(id: Int, dto: UpdateBookCopyLocationDTO): Boolean {
         require(id > 0) { "ID must be positive" }
         return repository.updateLocation(id, dto.is_in_here)
+    }
+
+    fun updateBorrowedStatus(id: Int, dto: UpdateBookCopyBorrowedStatusDTO): Boolean {
+        require(id > 0) { "ID must be positive" }
+        return repository.updateBorrowedStatus(id, dto.borrowed_By_Other_User)
     }
 } 

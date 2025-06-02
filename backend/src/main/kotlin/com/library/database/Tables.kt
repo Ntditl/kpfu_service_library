@@ -45,6 +45,7 @@ object BookCopies : Table("book_copies") {
     val bookId = integer("book_id").references(Books.bookId)
     val isInHere = bool("is_in_here")
     val isInReservation = bool("is_in_reservation")
+    val isInBorrowedByUser = bool("borrowed_by_other_user").default(false)
 
     override val primaryKey = PrimaryKey(copyId)
 }

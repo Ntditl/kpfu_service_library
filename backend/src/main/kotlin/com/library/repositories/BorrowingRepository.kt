@@ -50,6 +50,12 @@ class BorrowingRepository {
         Borrowings.deleteWhere { Borrowings.reservationId eq id } > 0
     }
 
+    fun updateReturnDate(id: Int, dateToReturn: LocalDateTime): Boolean = transaction {
+        Borrowings.update({ Borrowings.reservationId eq id }) { stmt ->
+            stmt[Borrowings.dateToReturn] = dateToReturn
+        } > 0
+    }
+
     private fun toBorrowingDTO(row: ResultRow): BorrowingDTO {
         return BorrowingDTO(
             reservation_id = row[Borrowings.reservationId],
