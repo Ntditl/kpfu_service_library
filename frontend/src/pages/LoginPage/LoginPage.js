@@ -32,6 +32,7 @@ function LoginPage() {
       localStorage.setItem('last_name', user.last_name);
       localStorage.setItem('phone', user.phone);
       localStorage.setItem('role', user.role);
+      localStorage.setItem('role_id', user.role_id);
 
       console.log('Сохраненные значения:', {
         role: localStorage.getItem('role'),

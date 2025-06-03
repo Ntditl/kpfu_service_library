@@ -180,7 +180,7 @@ function UserDashboard() {
           ) : (
             <ul className="request-list">
               {requests.map((req) => {
-                const statusClass = req.date_of_return
+                const statusClass = req.date_to_return
                   ? "returned"
                   : req.res_answer_to_user === true
                   ? "approved"
@@ -192,12 +192,12 @@ function UserDashboard() {
                   <li key={req.reservation_id} className={`request-item ${statusClass}`}>
                     <p><strong>Книга:</strong> {getBookTitleByCopyId(req.book_copy_id)}</p>
                     <p><strong>Дата заявки:</strong> {new Date(req.date_request_from_user).toLocaleString()}</p>
-                    <p><strong>Статус:</strong> {renderStatus(req.res_answer_to_user, req.date_of_start_of_issuance, req.date_of_return)}</p>
+                    <p><strong>Статус:</strong> {renderStatus(req.res_answer_to_user, req.date_of_start_of_issuance, req.date_to_return)}</p>
                     {req.date_of_start_of_issuance && (
                       <p><strong>Дата выдачи:</strong> {new Date(req.date_of_start_of_issuance).toLocaleString()}</p>
                     )}
-                    {req.date_of_return && (
-                      <p><strong>Дата возврата:</strong> {new Date(req.date_of_return).toLocaleString()}</p>
+                    {req.date_to_return && (
+                      <p><strong>Дата возврата:</strong> {new Date(req.date_to_return).toLocaleString()}</p>
                     )}
                   </li>
                 );

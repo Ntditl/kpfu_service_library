@@ -219,7 +219,7 @@ function LibrarianDashboard() {
                         onClick={() => handleReturnBook(req.reservation_id)}
                         className="return-button"
                       >
-                        Книга возвращена
+                        Принять книгу от пользователя на возвращение
                       </button>
                     </div>
                   )}

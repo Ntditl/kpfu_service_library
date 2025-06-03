@@ -46,11 +46,21 @@ function Header() {
   };
 
   const handleProfileClick = () => {
+    console.log('handleProfileClick вызван');
+    console.log('Текущие значения в localStorage:', {
+      firstName: localStorage.getItem('first_name'),
+      roleId: localStorage.getItem('role_id'),
+      role: localStorage.getItem('role')
+    });
+    
     if (!firstName) {
+      console.log('firstName отсутствует, перенаправление на /login');
       navigate("/login");
       return;
     }
-    navigate(getProfilePath());
+    const path = getProfilePath();
+    console.log('Перенаправление на путь:', path);
+    navigate(path);
   };
 
   return (
