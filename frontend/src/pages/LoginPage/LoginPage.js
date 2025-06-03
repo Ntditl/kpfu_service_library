@@ -16,18 +16,28 @@ function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    console.log('Отправка формы с данными:', formData);
 
     try {
+      console.log('Отправка запроса на:', '/auth/login');
       const response = await api.post('/auth/login', formData);
+      console.log('Весь ответ от сервера:', response.data);
       const user = response.data.user;
+      console.log('Данные пользователя:', user);
 
       // Сохраняем всё, что нужно
       localStorage.setItem('token', response.data.token);
-      localStorage.setItem('user_id', user.user_id); // проверь, как именно называется id в бэкенде
+      localStorage.setItem('user_id', user.user_id);
       localStorage.setItem('first_name', user.first_name);
       localStorage.setItem('last_name', user.last_name);
       localStorage.setItem('phone', user.phone);
       localStorage.setItem('role', user.role);
+
+      console.log('Сохраненные значения:', {
+        role: localStorage.getItem('role'),
+        user_id: localStorage.getItem('user_id'),
+        first_name: localStorage.getItem('first_name')
+      });
 
       // Редирект в зависимости от роли
       if (user.role === 'user') {
@@ -42,7 +52,17 @@ function LoginPage() {
 
     } catch (err) {
       console.error("Ошибка входа:", err);
-      setError('Неверный email или пароль');
+      if (err.response) {
+        console.error("Ответ сервера при ошибке:", err.response.data);
+        console.error("Статус ошибки:", err.response.status);
+        setError(err.response.data.message || 'Неверный email или пароль');
+      } else if (err.request) {
+        console.error("Нет ответа от сервера:", err.request);
+        setError('Нет ответа от сервера. Проверьте подключение к интернету.');
+      } else {
+        console.error("Ошибка запроса:", err.message);
+        setError('Произошла ошибка при входе. Попробуйте позже.');
+      }
     }
   };
 
@@ -51,8 +71,22 @@ function LoginPage() {
       <h2>Вход</h2>
       {error && <div className="error-message">{error}</div>}
       <form onSubmit={handleSubmit}>
-        <input type="email" name="email" placeholder="Email" required onChange={handleChange} />
-        <input type="password" name="password" placeholder="Пароль" required onChange={handleChange} />
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Email" 
+          required 
+          onChange={handleChange}
+          value={formData.email}
+        />
+        <input 
+          type="password" 
+          name="password" 
+          placeholder="Пароль" 
+          required 
+          onChange={handleChange}
+          value={formData.password}
+        />
         <button type="submit">Войти</button>
       </form>
       <p>Нет аккаунта? <a href="/register">Зарегистрироваться</a></p>
@@ -61,4 +95,3 @@ function LoginPage() {
 }
 
 export default LoginPage;
-

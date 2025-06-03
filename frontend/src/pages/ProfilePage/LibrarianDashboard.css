@@ -58,3 +58,57 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+.toggle-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.request-item {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #999;
+  border-radius: 4px;
+}
+
+.request-item.pending {
+  border-color: #f0ad4e;
+}
+
+.request-item.approved {
+  border-color: #5cb85c;
+}
+
+.request-item.rejected {
+  border-color: #d9534f;
+}
+
+.issue-buttons {
+  margin-top: 10px;
+}
+
+.issue-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.issue-button:hover {
+  background-color: #45a049;
+}

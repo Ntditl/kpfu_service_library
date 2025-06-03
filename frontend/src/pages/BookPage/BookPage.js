@@ -16,29 +16,28 @@ function BookPage() {
   const [isUsingMockData, setIsUsingMockData] = useState(false);
 
   useEffect(() => {
-    const fetchBookData = async () => {
+    const fetchData = async () => {
       try {
-        const response = await api.get('/books');
-        const allBooks = response.data;
-        const selectedBook = allBooks.find(book => book.bookId.toString() === bookId);
+        const bookRes = await api.get('/books');
+        const allBooks = bookRes.data;
+        const selected = allBooks.find(book => book.bookId.toString() === bookId);
+        if (!selected) throw new Error("Книга не найдена");
 
-        if (!selectedBook) throw new Error("Книга не найдена");
-
-        setBookData(formatBookData(selectedBook));
+        const formatted = formatBookData(selected);
+        setBookData(formatted);
         setIsUsingMockData(false);
 
-        await fetchBookCopies(selectedBook.bookId);
+        await fetchBookCopies(selected.bookId);
       } catch (err) {
-        console.error("Ошибка запроса, используем моковые данные:", err);
+        console.warn("Ошибка запроса, переключаемся на мок:", err);
+        const saved = JSON.parse(localStorage.getItem('mockBooks')) || mockBooks;
+        const found = saved.find(book => book.bookId.toString() === bookId);
 
-        const savedBooks = JSON.parse(localStorage.getItem('mockBooks')) || mockBooks;
-        const foundBook = savedBooks.find(book => book.bookId.toString() === bookId);
-
-        if (foundBook) {
-          setBookData(formatBookData(foundBook));
+        if (found) {
+          setBookData(formatBookData(found));
+          setCopies([]); // мок-экземпляров нет
           setIsUsingMockData(true);
           setError("Сервер недоступен. Показаны демонстрационные данные.");
-          setCopies([]); // мок-копий нет
         } else {
           setError("Книга не найдена");
         }
@@ -48,17 +47,15 @@ function BookPage() {
     };
 
     const fetchBookCopies = async (bookId) => {
-    try {
-        const res = await api.get("/book-copies"); // получаем все
-        const allCopies = res.data;
-        const filtered = allCopies.filter(copy => copy.book_id === Number(bookId));
+      try {
+        const res = await api.get("/book-copies");
+        const filtered = res.data.filter(c => c.book_id === Number(bookId));
         setCopies(filtered);
       } catch (err) {
-        console.error("Ошибка загрузки экземпляров книги:", err);
+        console.error("Ошибка загрузки экземпляров:", err);
         setCopies([]);
       }
     };
-
 
     const formatBookData = (book) => ({
       id: book.bookId,
@@ -73,14 +70,25 @@ function BookPage() {
       keywords: book.keywords
     });
 
-    fetchBookData();
+    fetchData();
   }, [bookId]);
+
+  const refreshCopies = async () => {
+    if (isUsingMockData) return;
+    try {
+      const res = await api.get("/book-copies");
+      const filtered = res.data.filter(c => c.book_id === Number(bookId));
+      setCopies(filtered);
+    } catch (err) {
+      console.error("Ошибка обновления экземпляров:", err);
+    }
+  };
 
   if (loading) return <div className="loading">Загрузка...</div>;
   if (error && !isUsingMockData) return <div className="error">{error}</div>;
   if (!bookData) return <div className="error">Данные о книге не загружены</div>;
 
-  const availableCopies = copies.filter(c => c.is_in_here && !c.is_in_reservation).length;
+  const availableCount = copies.filter(c => c.is_in_here && !c.is_in_reservation).length;
 
   return (
     <div className="book-page">
@@ -95,16 +103,12 @@ function BookPage() {
           <ActionButtons
             bookId={bookData.id}
             copies={copies}
-            refreshCopies={() => {
-              if (!isUsingMockData) {
-                api.get(`/book-copies?book_id=${bookId}`).then(res => setCopies(res.data));
-              }
-            }}
+            refreshCopies={refreshCopies}
           />
         </div>
         <div className="book-details">
           <BookInfo {...bookData} />
-          <p><strong>Доступно экземпляров: </strong>{availableCopies}</p>
+          <p><strong>Доступно экземпляров: </strong>{availableCount}</p>
         </div>
       </div>
     </div>
@@ -112,4 +116,5 @@ function BookPage() {
 }
 
 export default BookPage;
+
 

@@ -5,17 +5,17 @@ import AdminDashboard from "./AdminDashboard";
 import "./ProfilePage.css";
 
 const ProfilePage = () => {
-  const role = localStorage.getItem("role");
+  const roleId = localStorage.getItem("role_id");
 
   return (
     <div className="profile-page">
       <h1>Личный кабинет</h1>
 
-      {role === "user" && <UserDashboard />}
-      {role === "librarian" && <LibrarianDashboard />}
-      {role === "admin" && <AdminDashboard />}
+      {roleId === "1" && <UserDashboard />}
+      {roleId === "2" && <LibrarianDashboard />}
+      {roleId === "3" && <AdminDashboard />}
 
-      {!role && <p>Роль пользователя не определена</p>}
+      {!roleId && <p>Роль пользователя не определена</p>}
     </div>
   );
 };

@@ -1,95 +1,50 @@
 .user-dashboard {
-  padding: 2rem;
-  max-width: 900px;
+  padding: 20px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .user-info {
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.user-info h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #333;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .user-info p {
-  margin: 0.25rem 0;
-  font-size: 1rem;
-  color: #555;
-}
-
-.user-requests {
-  margin-top: 2rem;
-}
-
-.user-requests h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.request-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.request-card {
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-  transition: box-shadow 0.2s ease;
-}
-
-.request-card:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.request-card h4 {
-  margin: 0 0 0.3rem 0;
-  font-size: 1.1rem;
-  color: #444;
-}
-
-.request-card p {
-  margin: 0.2rem 0;
-  font-size: 0.95rem;
-  color: #666;
-}
-
-.status {
-  font-weight: bold;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-
-.status.pending {
-  background-color: #ffefc1;
-  color: #a67c00;
-}
-
-.status.approved {
-  background-color: #d4f4dd;
-  color: #2e7d32;
-}
-
-.status.rejected {
-  background-color: #ffd6d6;
-  color: #b71c1c;
+  margin: 10px 0;
 }
 
 .requests-section {
-  margin-top: 2rem;
+  margin-top: 20px;
+}
+
+.toggle-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.toggle-button:hover {
+  background: #0056b3;
+}
+
+.role-request-button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.role-request-button:hover {
+  background: #218838;
 }
 
 .request-list {
@@ -98,61 +53,28 @@
 }
 
 .request-item {
-  background: #f9f9f9;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-left: 5px solid #999;
-  border-radius: 4px;
-}
-
-.request-item.pending {
-  border-color: #f0ad4e;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
 }
 
 .request-item.approved {
-  border-color: #5cb85c;
+  border-left: 5px solid #28a745;
 }
 
 .request-item.rejected {
-  border-color: #d9534f;
+  border-left: 5px solid #dc3545;
 }
 
-.request-list {
-  list-style: none;
-  padding: 0;
+.request-item.pending {
+  border-left: 5px solid #ffc107;
 }
 
-.request {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.request.approved {
-  border-left: 6px solid green;
-}
-
-.request.rejected {
-  border-left: 6px solid red;
-}
-
-.request.pending {
-  border-left: 6px solid orange;
-}
-
-.toggle-button {
-  background-color: #007bff;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  margin: 1rem 0;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.toggle-button:hover {
-  background-color: #0056b3;
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 5px;
 }

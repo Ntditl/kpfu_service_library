@@ -1,71 +1,68 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 40px;
-    background: #F8F8F8;
-    color: black;
-    height: 80px;
-    border: 1px solid #333A8A;
-  }
-  
-  
-  .logo-img {
-    height: 70px;
-    width: 200px;
-  }
-  
-  .search-container {
-    display: flex;
-    flex-grow: 1;
-    max-width: 615px;
-    height: 57px;
-    border: 2px solid #333A8A;
-    border-radius: 20px;
-  }
-  
-  .search-input {
-    flex-grow: 1;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    
-    background: #F8F8F8;
-  }
-  
-  .search-button {
-    background: #333A8A;
-    width: 117px;
-    border: none;
-    padding: 0 15px;
-    border-radius: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .search-button svg {
-    color: white;
-  }
-  
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  background: #F8F8F8;
+  color: black;
+  height: 80px;
+  border: 1px solid #333A8A;
+}
 
-  .notification-item, .login-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    color: #000000;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    background: none;
-    border: none;
-    border-radius: 20px;
-    transition: background 0.3s, transform 0.2s;
-  }
+.logo-img {
+  height: 70px;
+  width: 200px;
+}
+
+.search-container {
+  display: flex;
+  flex-grow: 1;
+  max-width: 615px;
+  height: 57px;
+  border: 2px solid #333A8A;
+  border-radius: 20px;
+  margin: 0 20px;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  background: #F8F8F8;
+}
+
+.search-button {
+  background: #333A8A;
+  width: 117px;
+  border: none;
+  padding: 0 15px;
+  border-radius: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button svg {
+  color: white;
+}
+
+/* Универсальный стиль для иконок в правом углу */
+.notification-item,
+.login-item {
+  width: 76px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 20px;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
 
 .notification-item:hover,
 .login-item:hover {
@@ -76,57 +73,101 @@
 .login-item:active {
   transform: scale(0.95);
 }
-  .notification-item {
-    height: 70px;
-    width: 76px;
-  }
-  .login-item {
-    height: 70px;
-    width: 70px;
-  }
+
+.notification-item {
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #000000;
+}
+
+/* Каталог */
+.catalog-but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #333A8A;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  width: 75px;
+  height: 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.catalog-but:hover {
+  background: #2a3070;
+}
+
+.catalog-but:active {
+  transform: scale(0.98);
+}
+
+/* Профиль */
+.profile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 100%;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #000000;
+}
+
+/* Выпадающая кнопка "Выйти" */
+.logout-wrapper {
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+  display: none;
+  z-index: 10;
+}
 
 
 
-  .catalog-but {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    background: #333A8A;
-    color: white;
-    border: none;
-    padding: 16px 24px;
-    width: 75px;
-    height: 25px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-  }
-  
-  .catalog-but:hover {
-    background: #2a3070; 
-  }
-  
-  .catalog-but:active {
-    transform: scale(0.98);
-  }
-
-  .logout-button {
-  margin-left: 10px;
+.logout-button {
+  color: #f0f0f0;
   padding: 5px 10px;
-  background-color: transparent;
-  border: 1px solid #888;
+  background-color: #333A8A;
+  border: 1px solid #333A8A;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.2s ease;
+  white-space: nowrap;
 }
 
 .logout-button:hover {
-  background-color: #f0f0f0;
+  background-color: #2a3070;
+}
+
+/* Обертка для профиля и кнопки */
+.login-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 76px;
 }
 
 
-  
+
+
+.logout-wrapper {
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+  display: block; /* ← вот это главное */
+  z-index: 10;
+}

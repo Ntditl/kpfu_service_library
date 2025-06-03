@@ -5,12 +5,52 @@ import React from "react";
 function Header() {
   const navigate = useNavigate();
   const firstName = localStorage.getItem("first_name");
+  const roleId = localStorage.getItem("role_id");
+  const role = localStorage.getItem("role");
+
+  // Проверяем все значения в localStorage
+  console.log('Все значения из localStorage:', {
+    firstName,
+    roleId,
+    role,
+    userId: localStorage.getItem("user_id"),
+    lastName: localStorage.getItem("last_name"),
+    phone: localStorage.getItem("phone"),
+    token: localStorage.getItem("token")
+  });
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("first_name");
-    navigate("/"); // Вернём пользователя на главную
-    window.location.reload(); // Перезагружаем, чтобы обновить отображение шапки
+    localStorage.removeItem("last_name");
+    localStorage.removeItem("phone");
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("role_id");
+    navigate("/");
+    window.location.reload();
+  };
+
+  const getProfilePath = () => {
+    console.log('getProfilePath - roleId:', roleId);
+    switch (roleId) {
+      case "1":
+        return "/profile/user";
+      case "2":
+        return "/profile/librarian";
+      case "3":
+        return "/profile/admin";
+      default:
+        console.log('getProfilePath - default case, redirecting to login');
+        return "/login";
+    }
+  };
+
+  const handleProfileClick = () => {
+    if (!firstName) {
+      navigate("/login");
+      return;
+    }
+    navigate(getProfilePath());
   };
 
   return (
@@ -21,7 +61,11 @@ function Header() {
       <Link to="/" className="catalog-but">
         Каталог
       </Link>
-      
+      {firstName && (
+        <Link to={getProfilePath()} className="catalog-but">
+          Личный кабинет
+        </Link>
+      )}
       <div className="search-container">
         <input 
           type="text" 
@@ -40,10 +84,18 @@ function Header() {
         <span>Уведомления</span>
       </div>
       {firstName ? (
-        <div className="login-item" style={{ cursor: 'pointer' }}>
-          <img src="/images/profile_icon.png" alt="Профиль" width="50" height="50" />
-          <span>{firstName}</span>
-          <button onClick={handleLogout} className="logout-button">Выйти</button>
+        <div className="login-wrapper">
+          <div 
+            className="profile-menu"
+            onClick={handleProfileClick}
+            style={{ cursor: "pointer" }}
+          >
+            <img src="/images/profile_icon.png" alt="Профиль" width="50" height="50" />
+            <span>{firstName}</span>
+          </div>
+          <div className="logout-wrapper">
+            <button onClick={handleLogout} className="logout-button">Выйти</button>
+          </div>
         </div>
       ) : (
         <Link to="/login" className="login-item">
@@ -51,7 +103,6 @@ function Header() {
           <span>Войти</span>
         </Link>
       )}
-      
     </header>
   );
 }
