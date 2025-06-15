@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./LibrarianDashboard.css";
 import { api } from "../../api";
 
 function LibrarianDashboard() {
+  const navigate = useNavigate();
   const [requests, setRequests] = useState([]);
   const [bookCopies, setBookCopies] = useState([]);
   const [books, setBooks] = useState([]);
@@ -169,10 +171,17 @@ function LibrarianDashboard() {
 
   return (
     <div className="librarian-dashboard">
-      <h2>Заявки пользователей</h2>
-      <button className="toggle-button" onClick={() => setShowRequests(!showRequests)}>
-        {showRequests ? "Скрыть заявки" : "Показать заявки"}
-      </button>
+      <div className="dashboard-header">
+        <h2>Заявки пользователей</h2>
+        <div className="header-buttons">
+          <button className="add-book-button" onClick={() => navigate('/add-book')}>
+            Добавить книгу
+          </button>
+          <button className="toggle-button" onClick={() => setShowRequests(!showRequests)}>
+            {showRequests ? "Скрыть заявки" : "Показать заявки"}
+          </button>
+        </div>
+      </div>
 
       {showRequests && (
         requests.length === 0 ? (
