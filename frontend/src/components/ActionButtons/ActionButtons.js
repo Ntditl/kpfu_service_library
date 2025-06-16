@@ -5,7 +5,6 @@ import "./ActionButtons.css";
 function ActionButtons({ bookId, copies, refreshCopies }) {
   const userId = localStorage.getItem("user_id");
 
-  // Фильтруем доступные экземпляры
   const availableCopies = copies.filter(c => c.is_in_here && !c.is_in_reservation);
 
   const handleReserve = async () => {
@@ -21,7 +20,7 @@ function ActionButtons({ bookId, copies, refreshCopies }) {
 
   try {
     const now = new Date();
-    const localDate = now.toISOString().slice(0, 16); // YYYY-MM-DDTHH:mm
+    const localDate = now.toISOString().slice(0, 16);
 
     const response = await api.post("/borrowings/by-book", {
       user_id: userId,

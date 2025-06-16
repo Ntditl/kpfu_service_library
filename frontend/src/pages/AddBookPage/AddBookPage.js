@@ -34,6 +34,38 @@ const AddBookPage = () => {
     e.preventDefault();
     setLoading(true);
     setError('');
+
+    if (!formData.title.trim()) {
+      setError('Название книги не может быть пустым');
+      setLoading(false);
+      return;
+    }
+
+    if (!formData.author.trim()) {
+      setError('Имя автора не может быть пустым');
+      setLoading(false);
+      return;
+    }
+
+    const currentYear = new Date().getFullYear();
+    if (formData.publicationYear > currentYear) {
+      setError(`Год издания не может быть больше ${currentYear}`);
+      setLoading(false);
+      return;
+    }
+
+    try {
+      new URL(formData.coverUrl);
+      if (!formData.coverUrl.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+        setError('Ссылка на обложку должна указывать на изображение (jpg, jpeg, png, gif, webp)');
+        setLoading(false);
+        return;
+      }
+    } catch (err) {
+      setError('Введите корректную ссылку на обложку');
+      setLoading(false);
+      return;
+    }
     
     try {
       try {
@@ -196,7 +228,5 @@ const AddBookPage = () => {
     </div>
   );
 };
-
-
 
 export default AddBookPage;

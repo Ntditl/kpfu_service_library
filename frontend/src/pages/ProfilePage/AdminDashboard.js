@@ -39,7 +39,7 @@ function AdminDashboard() {
 
       if (decision === true) {
         await api.put(`/users/${request.user_id}`, {
-          role_id: 2 // Предполагаем, что role_id=2 соответствует роли библиотекаря
+          role_id: 2
         });
         localStorage.setItem("role", "librarian");
       }

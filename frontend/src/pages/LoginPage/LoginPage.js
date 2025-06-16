@@ -25,7 +25,6 @@ function LoginPage() {
       const user = response.data.user;
       console.log('Данные пользователя:', user);
 
-      // Сохраняем всё, что нужно
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user_id', user.user_id);
       localStorage.setItem('first_name', user.first_name);
@@ -40,7 +39,6 @@ function LoginPage() {
         first_name: localStorage.getItem('first_name')
       });
 
-      // Редирект в зависимости от роли
       if (user.role === 'user') {
         navigate('/profile/user');
       } else if (user.role === 'librarian') {

@@ -88,7 +88,6 @@ function UserDashboard() {
     }
   }, [user.user_id]);
 
-  // Автоматическое обновление заявок каждые 10 секунд
   useEffect(() => {
     const interval = setInterval(() => {
       if (user.user_id) fetchData();

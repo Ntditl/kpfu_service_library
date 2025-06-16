@@ -26,6 +26,12 @@ function RegisterPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+
+    if (!/^\d+$/.test(formData.phone)) {
+      setError('Номер телефона должен содержать только цифры');
+      return;
+    }
+
     try {
       const response = await api.post('/auth/register', formData);
       if (response.status === 201) {

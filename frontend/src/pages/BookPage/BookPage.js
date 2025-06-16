@@ -35,7 +35,7 @@ function BookPage() {
 
         if (found) {
           setBookData(formatBookData(found));
-          setCopies([]); // мок-экземпляров нет
+          setCopies([]);
           setIsUsingMockData(true);
           setError("Сервер недоступен. Показаны демонстрационные данные.");
         } else {

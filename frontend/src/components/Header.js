@@ -8,7 +8,6 @@ function Header() {
   const roleId = localStorage.getItem("role_id");
   const role = localStorage.getItem("role");
 
-  // Проверяем все значения в localStorage
   console.log('Все значения из localStorage:', {
     firstName,
     roleId,

@@ -1,7 +1,7 @@
 import React from "react";
 import "./BookInfo.css";
 
-function BookInfo({ title, author, year, publish, isbn, description}) {
+function BookInfo({ title, author, year, publish, isbn, description, genre}) {
   return (
     <div className="book-info">
       <h1>{title}</h1>
@@ -11,6 +11,7 @@ function BookInfo({ title, author, year, publish, isbn, description}) {
         <span>Год издания: {year} </span>
         <span>Издательство: {publish}</span>
         <span>ISBN: {isbn}</span>
+        <span>Жанр: {genre}</span>
       </div>
       
       <div className="book-description">

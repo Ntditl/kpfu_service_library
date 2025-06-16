@@ -1,4 +1,3 @@
-// src/data/mockData.js
 export const mockBooks = [
     {
       bookId: 1,
